@@ -1,8 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/buttons/resumebutton.dart';
-import 'package:portfolio/homescreen/TabLinks.dart';
+import '../buttons/resumebutton.dart';
+import '../homescreen/TabLinks.dart';
 
 class ColumnChildren extends StatelessWidget {
   BoxConstraints constraints;

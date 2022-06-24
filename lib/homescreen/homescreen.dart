@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/homescreen/ColumnChildren.dart';
+import '../homescreen/ColumnChildren.dart';
 
 class HomeScreenBlock extends StatelessWidget {
   @override

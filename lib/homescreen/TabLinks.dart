@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/buttons/BarButtons.dart';
-import 'package:portfolio/homescreen/linkmenu.dart';
+import '../buttons/BarButtons.dart';
+import '../homescreen/linkmenu.dart';
 import 'package:url_launcher/url_launcher.dart' as hyperlink;
 
 class TabLinks extends StatelessWidget {

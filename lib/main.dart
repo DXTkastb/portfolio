@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/aboutme/about_me.dart';
-import 'package:portfolio/contact/contactScreen.dart';
-import 'package:portfolio/homescreen/homescreen.dart';
-import 'package:portfolio/projects/ProjectsScreen.dart';
-import 'package:portfolio/skills/carRow.dart';
+import '../aboutme/about_me.dart';
+import '../contact/contactScreen.dart';
+import '../homescreen/homescreen.dart';
+import '../projects/ProjectsScreen.dart';
+import '../skills/carRow.dart';
 
 
 void main() {
