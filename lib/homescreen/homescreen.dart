@@ -1,40 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/homescreen/ColumnChildren.dart';
-import 'package:portfolio/displaysize.dart';
+
 class HomeScreenBlock extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-
     return LayoutBuilder(builder: (context, constraint) {
-
-      var ismob=true;
-      if (constraint.maxHeight > 750 && constraint.maxWidth > 1110)
-        ismob=false;
-        return MainContainer(constraint.maxHeight, constraint.maxWidth,ismob);
-
+      bool isMobile = constraint.maxWidth < 1100;
+      return SingleChildScrollView(
+        child: Container(
+          constraints: BoxConstraints(
+              minHeight: constraint.maxHeight - ((!isMobile) ? 160 : 0)),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular((isMobile) ? 0 : 8),
+            border: Border.all(
+              color: Colors.black,
+              width: (isMobile) ? 0 : 5.0,
+            ),
+            color: Colors.amber.shade600.withOpacity(0.55),
+          ),
+          margin:
+              (isMobile) ? const EdgeInsets.all(0) : const EdgeInsets.all(80),
+          child: ColumnChildren(constraint, isMobile),
+        ),
+      );
     });
-  }
-}
-
-class MainContainer extends StatelessWidget {
-  final double height;
-  final double width;
-final bool constraints;
-  const MainContainer(this.height, this.width, this.constraints);
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Container(
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.black, width: 1.5),
-        color:
-          Colors.amber.shade600,
-      ),
-      constraints: BoxConstraints(minHeight: height),
-      margin: (constraints)?const EdgeInsets.all(0): EdgeInsets.all((DisplaySize.width_screen*0.040)),
-      child: ColumnChildren(width,constraints),
-    );
   }
 }

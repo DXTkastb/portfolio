@@ -17,126 +17,89 @@ class TabLinks extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement buildr
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Expanded(
-            flex: 1,
-            child: Container(
+        Container(
+          height: 52,
+          decoration: BoxDecoration(
+            color: (ismob) ? Colors.transparent : Colors.white,
+            borderRadius: BorderRadius.circular(60),
+          ),
+          child: Row(
+            children: [
+              Tooltip(
+                message: 'Github',
+                child: MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: GestureDetector(
+                    onTap: () {
+                      launchUrl('https://github.com/DXTkastb');
+                    },
+                    child: const Padding(
+                      padding: EdgeInsets.only(
+                          left: 5, right: 5, top: 5, bottom: 5),
+                      child: Image(
+                        image: AssetImage('images/github.png'),
 
-
-              alignment: Alignment.centerLeft,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: (ismob)?Colors.transparent:Colors.white,
-                  borderRadius: BorderRadius.circular(60),
-                ),
-                margin: const EdgeInsets.only(
-                    left: 40),
-
-                width: 115,
-                child: Row(
-                  children: [
-                    Tooltip(
-                      message: 'Github',
-                      child: MouseRegion(
-                        cursor: SystemMouseCursors.click,
-                        child: GestureDetector(
-                          onTap: () {
-                            launchUrl('https://github.com/DXTkastb');
-                          },
-                          child: const Padding(
-                            padding: EdgeInsets.only(
-                                left: 5, right: 5, top: 5, bottom: 5),
-                            child: Image(
-                              image: AssetImage('images/github.png'),
-                              height: 45,
-                              width: 45,
-                            ),
-                          ),
-                        ),
                       ),
                     ),
-                    const SizedBox(
-                      width: 5,
-                    ),
-                    Tooltip(
-                      message: 'Linkedin',
-                      child: MouseRegion(
-                        cursor: SystemMouseCursors.click,
-                        child: GestureDetector(
-                          onTap: () {
-                            launchUrl(
-                                'https://www.linkedin.com/in/kaustubhdxt/');
-                          },
-                          child: const Padding(
-                            padding: EdgeInsets.only(
-                                left: 5, right: 5, top: 5, bottom: 5),
-                            child: Image(
-                              image: AssetImage('images/link.png'),
-                              height: 45,
-                              width: 45,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
-            )),
-        // Expanded(child: Container(),flex: ,),
-        (ismob)
-            ?  Container(
+              const SizedBox(
+                width: 3,
+              ),
+              Tooltip(
+                message: 'Linkedin',
+                child: MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: GestureDetector(
+                    onTap: () {
+                      launchUrl(
+                          'https://www.linkedin.com/in/kaustubhdxt/');
+                    },
+                    child: const Padding(
+                      padding: EdgeInsets.only(
+                          left: 5, right: 5, top: 5, bottom: 5),
+                      child: Image(
+                        image: AssetImage('images/link.png'),
 
-
-          margin: const EdgeInsets.only(
-          right: 30, ),
-
-              child: Material(
-                      color: Colors.transparent,
-                    child: LinkMenu(),
-                  ),
-            )
-
-            : Expanded(
-                flex: 3,
-                child: Container(
-
-                  alignment: Alignment.centerRight,
-                  child: SizedBox(
-                    width: 870,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(20),
-                          child: BarButtons(
-                              'PROJECTS', Colors.teal.shade300, 'project'),
-                        ),
-                        Padding(
-                            padding: const EdgeInsets.all(20),
-                            child: BarButtons(
-                                'STACK', Colors.teal.shade300, 'stack')),
-                        Padding(
-                          padding: const EdgeInsets.all(20),
-                          child: BarButtons(
-                              'SKILLS', Colors.teal.shade300, 'skill'),
-                        ),
-                        Padding(
-                            padding: const EdgeInsets.all(20),
-                            child: BarButtons(
-                                'ABOUTME', Colors.teal.shade300, 'about me')),
-                        Padding(
-                            padding: const EdgeInsets.all(20),
-                            child: BarButtons(
-                                'CONTACT', Colors.teal.shade300, 'contact')),
-                        const SizedBox(
-                          width: 20,
-                        )
-                      ],
+                      ),
                     ),
                   ),
-                )),
+                ),
+              ),
+            ],
+          ),
+        ),
+        // Expanded(child: Container(),flex: ,),
+
+        (ismob)
+            ? Material(
+              color: Colors.transparent,
+              child: LinkMenu(),
+            )
+            : SizedBox(
+
+              width: 600,
+              child: Row(
+
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  BarButtons(
+                      'PROJECTS', Colors.teal.shade300, 'project'),
+                  BarButtons(
+                      'STACK', Colors.teal.shade300, 'stack'),
+                  BarButtons(
+                      'SKILLS', Colors.teal.shade300, 'skill'),
+                  BarButtons(
+                      'ABOUTME', Colors.teal.shade300, 'about me'),
+                  BarButtons(
+                      'CONTACT', Colors.teal.shade300, 'contact'),
+
+                ],
+              ),
+            ),
       ],
     );
   }

@@ -5,88 +5,64 @@ import 'package:portfolio/buttons/resumebutton.dart';
 import 'package:portfolio/homescreen/TabLinks.dart';
 
 class ColumnChildren extends StatelessWidget {
-  double width;
-  final bool ismob;
+  BoxConstraints constraints;
+  final bool ismobile;
 
-  void Function()? nothing(){
+  void Function()? nothing() {}
 
-  }
-  ColumnChildren(this.width,this.ismob);
+  ColumnChildren(this.constraints, this.ismobile);
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Flexible(
-          fit: FlexFit.tight,
-          flex: 1,
-          child: Container(
-
-            alignment: Alignment.centerRight,
-            height: double.infinity,
-            width: double.infinity,
-            child:  TabLinks(ismob),
-          ),
+        Container(
+          alignment: Alignment.center,
+          padding:
+              const EdgeInsets.only(top: 30, bottom: 0, left: 40, right: 40),
+          child: TabLinks(ismobile),
         ),
-        Flexible(
-          fit: FlexFit.tight,
-          flex: 4,
-          child: Container(
-              alignment: Alignment.center,
-              child: RichText(
-
-                  text: TextSpan(
+        Container(
+            height: 300,
+            alignment: Alignment.center,
+            child: RichText(
+              text: TextSpan(
                 children: [
                   TextSpan(
-
-                    text: 'Hi !, I am ',
+                    text: 'Hi !, I am a ',
                     style: TextStyle(
-
-                        decoration: TextDecoration.none,
-                        fontWeight: FontWeight.bold,
-                        fontSize: (ismob)?30:(width * 0.038),
-                        color:Colors.white,
-                        // const Color.fromRGBO(34, 87, 126, 1.0),
-                        fontFamily: 'disp',),
-
-
+                      decoration: TextDecoration.none,
+                      fontWeight: FontWeight.bold,
+                      fontSize:
+                          (ismobile) ? 30 : (constraints.maxWidth * 0.038),
+                      color: Colors.white,
+                      // const Color.fromRGBO(34, 87, 126, 1.0),
+                      fontFamily: 'disp',
+                    ),
                   ),
-                  (ismob)?const TextSpan(text: '\n'):const TextSpan(text: ''),
-
+                  (ismobile)
+                      ? const TextSpan(text: '\n')
+                      : const TextSpan(text: ''),
                   TextSpan(
                     text: 'Web Developer!',
                     style: TextStyle(
-    fontFamily: 'disp',
-                        decoration: TextDecoration.underline,
-
-                        fontWeight: FontWeight.bold,
-                        fontSize: (ismob)?50:(width * 0.060),
-
-
-                        ),
+                      fontFamily: 'disp',
+                      decoration: TextDecoration.underline,
+                      fontWeight: FontWeight.bold,
+                      fontSize:
+                          (ismobile) ? 50 : (constraints.maxWidth * 0.060),
+                    ),
                   ),
                 ],
-              )
-
-
-              ,
-                textAlign: TextAlign.center,
-              )
               ),
-        ),
-        Flexible(
-          fit: FlexFit.tight,
-          flex: 1,
-          child: Container(
-
-            alignment: Alignment.center,
-            child: TextButton(
-              onPressed: () {},
-              child:  ResumeButton("RESUME",true,Colors.black,const Color.fromRGBO(
-                  250, 255, 152, 1.0),nothing),
-            ),
-          ),
+              textAlign: TextAlign.center,
+            )),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 30),
+          child: ResumeButton("RESUME", true, Colors.black,
+              const Color.fromRGBO(250, 255, 152, 1.0), nothing),
         ),
       ],
     );
