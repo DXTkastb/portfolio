@@ -39,15 +39,13 @@ class BarButtons extends StatelessWidget {
 
         },
         style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.resolveWith((states) => cc2),
+            backgroundColor: MaterialStateProperty.all(cc2),
             // const Color.fromRGBO(85, 132, 172, 1.0)),
-            padding: MaterialStateProperty.resolveWith((states) =>
-                const EdgeInsets.only(
-                    left: 20, top: 30, right: 20, bottom: 30)),
-            shape: MaterialStateProperty.resolveWith((states) =>
-                RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(55),
-                    side: const BorderSide(width: 1)))),
+            padding: MaterialStateProperty.all(const EdgeInsets.only(
+                left: 20, top: 30, right: 20, bottom: 30)),
+            shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(55),
+                side: const BorderSide(width: 1)))),
         child: Text(
           insideText,
           style:

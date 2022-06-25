@@ -40,11 +40,9 @@ class ResumeButton extends StatelessWidget {
               return GetLightColor.getLight(bgcolor);
               // return const Color.fromRGBO(250, 255, 175, 1.0);
             }),
-            padding: MaterialStateProperty.resolveWith((states) =>
-                const EdgeInsets.only(
-                    left: 20, top: 30, right: 20, bottom: 30)),
-            shape: MaterialStateProperty.resolveWith((states) =>
-                const RoundedRectangleBorder(side: BorderSide(width: 2)))),
+            padding: MaterialStateProperty.all(const EdgeInsets.only(
+                left: 20, top: 30, right: 20, bottom: 30)),
+            shape: MaterialStateProperty.all(const RoundedRectangleBorder(side: BorderSide(width: 2)))),
         child: SizedBox(
           width: 110,
           child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [

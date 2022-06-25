@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/data/skilldata.dart';
+import '../data/skilldata.dart';
 
 class SkillBox2 extends StatelessWidget {
   final MapEntry<String, String> e;
@@ -8,8 +8,8 @@ class SkillBox2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
+      constraints: const BoxConstraints(maxWidth: 400),
       margin: const EdgeInsets.only(bottom: 10),
       decoration: BoxDecoration(
         color: Colors.black,
@@ -23,6 +23,7 @@ class SkillBox2 extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
+
                   border: Border.all(
                       color: Colors.deepPurple[SkillData.proficient[e.key]!]!,
                       width: 15),
@@ -35,21 +36,17 @@ class SkillBox2 extends StatelessWidget {
             ),
           ),
           Expanded(
+            flex: 3,
               child: Container(
-                margin: const EdgeInsets.only(right: 22),
-                // color: Colors.red,
             alignment: Alignment.center,
+
             child: Text(
               e.key,
-              style: const TextStyle(
-                color: Colors.white,
-                decoration: TextDecoration.none,
-                fontSize: 22,
-                fontFamily: 'disp',
-                fontWeight: FontWeight.w100
-              ),
+              style: Theme.of(context).textTheme.bodyText1,
             ),
           )),
+          const Expanded(flex: 1,
+              child:SizedBox()),
         ],
       ),
     );

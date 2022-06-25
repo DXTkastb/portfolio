@@ -16,7 +16,10 @@ class HomeScreenBlock extends StatelessWidget {
               color: Colors.black,
               width: (isMobile) ? 0 : 5.0,
             ),
-            color: Colors.amber.shade600.withOpacity(0.55),
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,end: Alignment.bottomCenter,
+                colors: [Colors.amber.shade600.withOpacity(0.48),Colors.orange.shade600.withOpacity(0.59),]),
+
           ),
           margin:
               (isMobile) ? const EdgeInsets.all(0) : const EdgeInsets.all(80),
