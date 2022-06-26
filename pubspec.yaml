@@ -70,12 +70,6 @@ flutter:
      - images/skill/dart.png
      - images/skill/mysql.png
      - images/skill/redis.png
-     - images/dp2.jpg
-     - images/projectimg/portfolio.jpg
-     - images/projectimg/flower.jpg
-     - images/projectimg/galaxy.jpg
-     - images/projectimg/road.jpg
-     - images/projectimg/forest.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

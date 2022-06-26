@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../homescreen/ColumnChildren.dart';
 
 class HomeScreenBlock extends StatelessWidget {
@@ -11,15 +12,18 @@ class HomeScreenBlock extends StatelessWidget {
           constraints: BoxConstraints(
               minHeight: constraint.maxHeight - ((!isMobile) ? 160 : 0)),
           decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Colors.amber.shade600.withOpacity(0.48),
+                  Colors.orange.shade600.withOpacity(0.59),
+                ]),
             borderRadius: BorderRadius.circular((isMobile) ? 0 : 8),
             border: Border.all(
               color: Colors.black,
               width: (isMobile) ? 0 : 5.0,
             ),
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,end: Alignment.bottomCenter,
-                colors: [Colors.amber.shade600.withOpacity(0.48),Colors.orange.shade600.withOpacity(0.59),]),
-
           ),
           margin:
               (isMobile) ? const EdgeInsets.all(0) : const EdgeInsets.all(80),

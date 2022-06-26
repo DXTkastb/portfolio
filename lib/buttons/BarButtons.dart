@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/routelinks/route_link.dart';
+import '../routelinks/route_link.dart';
 
 class BarButtons extends StatelessWidget {
   final String insideText;
@@ -49,7 +49,7 @@ class BarButtons extends StatelessWidget {
         child: Text(
           insideText,
           style:
-              const TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+              const TextStyle(fontWeight: FontWeight.bold, color: Colors.black,fontSize: 14),
         ));
   }
 }

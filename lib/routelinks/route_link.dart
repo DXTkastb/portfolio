@@ -6,7 +6,6 @@ class RouteLink {
     'CONTACT':"/contact",'PROJECTS':'/projects',
     'ABOUTME':'/aboutme'
 
-
   }
 ;
 }

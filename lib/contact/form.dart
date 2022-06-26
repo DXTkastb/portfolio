@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/buttons/resumebutton.dart';
+import '../buttons/resumebutton.dart';
 
 class ContactForm extends StatefulWidget {
   @override

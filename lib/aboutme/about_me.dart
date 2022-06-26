@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/buttons/punch_hole.dart';
+import '../buttons/punch_hole.dart';
 import 'package:url_launcher/url_launcher.dart' as hyperlink;
 
 import '../buttons/BarButtons.dart';
@@ -20,7 +20,9 @@ class AboutMe extends StatelessWidget {
         child: Container(
           constraints: const BoxConstraints(maxWidth: 600),
           child: Column(
-            children: [
+            children: [              const SizedBox(
+              height: 20,
+            ),
               const BarButtons('GO BACK', Colors.white, 'back'),
               const SizedBox(
                 height: 20,
@@ -44,9 +46,9 @@ class AboutMe extends StatelessWidget {
                 alignment: Alignment.topLeft,
                 child: const Text(
                   '\n\nI am Kaustubh, based in Kanpur, India. I\'m a Web App Developer, Sketch Artist and a beginner Photographer.\n'
-                  '\n'
-                  'Building solutions that solve problems motivates me a lot. Also, being a team person\, I highly value optimistic attitude and a competitive atmosphere.\n'
-                  '\nI have completed my bachelor\'s in Information Technology(2017-2021) and currently, I work as an Associate Engineer at TATA Consultancy Services.',
+                  '\n''I have completed my bachelor\'s in Information Technology(2017-2021) and currently, I work as an Associate Engineer at TATA Consultancy Services.\n'
+                  '\nBuilding solutions that solve problems motivates me a lot. Also, being a team person\, I highly value optimistic attitude and a competitive atmosphere.'
+                  ,
                   style: TextStyle(
                     fontSize: 18,
                     color: Colors.white,
@@ -56,7 +58,9 @@ class AboutMe extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
-              PunchHoleButton(false),
+              PunchHoleButton(false),              const SizedBox(
+                height: 20,
+              ),
             ],
           ),
         ),

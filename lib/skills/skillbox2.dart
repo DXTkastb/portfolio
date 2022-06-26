@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../data/skilldata.dart';
 
 class SkillBox2 extends StatelessWidget {
@@ -23,7 +24,6 @@ class SkillBox2 extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-
                   border: Border.all(
                       color: Colors.deepPurple[SkillData.proficient[e.key]!]!,
                       width: 15),
@@ -36,17 +36,15 @@ class SkillBox2 extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 3,
+              flex: 3,
               child: Container(
-            alignment: Alignment.center,
-
-            child: Text(
-              e.key,
-              style: Theme.of(context).textTheme.bodyText1,
-            ),
-          )),
-          const Expanded(flex: 1,
-              child:SizedBox()),
+                alignment: Alignment.center,
+                child: Text(
+                  e.key,
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+              )),
+          const Expanded(flex: 1, child: SizedBox()),
         ],
       ),
     );
