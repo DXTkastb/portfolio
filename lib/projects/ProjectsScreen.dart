@@ -11,9 +11,9 @@ class ProjectScreen extends StatelessWidget {
     return Theme(
       data: ThemeData(
           textTheme: TextTheme(
-        headline1: TextStyle(
+        headline1: const TextStyle(
           fontSize: 60,
-          color: Colors.teal[200],
+          color: Colors.black,
           fontFamily: 'disp',
           decoration: TextDecoration.none,
         ),
@@ -34,10 +34,9 @@ class ProjectScreen extends StatelessWidget {
           var isSmall = (cons.maxWidth < 950);
 
           return Container(
-              color: const Color.fromRGBO(43, 88, 144, 1.0),
               padding: (isSmall)
                   ? const EdgeInsets.only(top: 70, left: 10, right: 10)
-                  : const EdgeInsets.only(top: 70, left: 70, right: 70),
+                  : const EdgeInsets.only(top: 70, left: 15, right: 15),
               child: SingleChildScrollView(
                 child: Wrap(
                   spacing: 10,
@@ -53,7 +52,8 @@ class ProjectScreen extends StatelessWidget {
                         : const SizedBox(),
                     const Align(
                       alignment: Alignment.center,
-                      child: BarButtons('GO BACK', Colors.white, 'back'),
+                      child: BarButtons('GO BACK', Color.fromRGBO(
+                          221, 239, 255, 1.0), 'back'),
                     ),
                     Center(
                       child: Padding(

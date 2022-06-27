@@ -17,7 +17,8 @@ class ProjectData {
         ],
         'some.github.com',
         'some.demo.com',
-        'images/projectimg/galaxy.jpg'),Project(
+        'images/projectimg/galaxy.jpg'),
+    Project(
         'Reminder App',
         'Help users by setting reminders and notifying them at appropriate time',
         ['Flutter', 'Spring', 'RestFul API', 'MySQL', 'Java', 'Dart'],
@@ -47,19 +48,27 @@ class ProjectData {
         ],
         'some.github.com',
         'some.demo.com',
-        'images/projectimg/flower.jpg'), Project(
+        'images/projectimg/flower.jpg'),
+    Project(
         'Portfolio',
         'Personnel project, build with Flutter, which describes my technical background and experience',
         [
           'Flutter',
           'Dart',
         ],
-        'some.github.com',
+        'https://github.com/DXTkastb/portfolio',
         'some.demo.com',
         'images/projectimg/portfolio.jpg'),
-
-
-
+    Project(
+        'MLTags',
+        'Suggest hashtags for an image. Using Google Computer Vision this app helps users generate hashtags for an image.',
+        [
+          'Flutter',
+          'Dart',
+        ],
+        'some.mltags.com',
+        'some.demo.com',
+        'images/projectimg/portfolio.jpg'),
   ];
 }
 

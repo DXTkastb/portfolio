@@ -31,7 +31,7 @@ class ProjectCard extends StatelessWidget {
       alignment: Alignment.center,
       child: Card(
         shadowColor: const Color.fromRGBO(2, 30, 50, 1.0),
-        elevation: 15,
+        elevation: 8,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         color: const Color.fromRGBO(200, 231, 255, 1.0),
         child: Column(

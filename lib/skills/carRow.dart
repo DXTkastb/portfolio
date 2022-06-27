@@ -55,7 +55,7 @@ class SkillScreen extends StatelessWidget {
               ),
               Container(
                 margin: const EdgeInsets.only(top: 46,bottom: 10),
-                height: 13,
+                height: 11,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
