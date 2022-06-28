@@ -63,6 +63,9 @@ flutter:
   assets:
      - images/github.png
      - images/link.png
+     - images/google.png
+     - images/stack.png
+     - images/insta.png
      - images/skill/flutter.png
      - images/skill/java.png
      - images/skill/python.png

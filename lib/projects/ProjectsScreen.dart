@@ -36,7 +36,8 @@ class ProjectScreen extends StatelessWidget {
           return Container(
               padding: (isSmall)
                   ? const EdgeInsets.only(top: 70, left: 10, right: 10)
-                  : const EdgeInsets.only(top: 70, left: 15, right: 15),
+                  : const EdgeInsets.only(top: 70, left: 15
+                  , right: 15),
               child: SingleChildScrollView(
                 child: Wrap(
                   spacing: 10,

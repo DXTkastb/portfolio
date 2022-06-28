@@ -3,8 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class MidText extends StatefulWidget {
-  final BoxConstraints box;
-  MidText(this.box);
+  final double box;
+  final bool isMobile;
+  MidText(this.box,this.isMobile);
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -36,14 +37,13 @@ class MidTextState extends State<MidText> with SingleTickerProviderStateMixin {
     super.initState();
   }
 
-  List<String> str = ['Web Developer!','Mobile App Developer','Sketch Artist','Photographer'];
+  List<String> str = ['Web Developer','Mobile App Developer','Sketch Artist','Photographer'];
 
   @override
   void didChangeDependencies() {
-    Timer.periodic(const Duration(milliseconds: 3000), (_) {
+    Timer.periodic(const Duration(milliseconds: 3500), (_) {
       fireAnimation();
     });
-
     super.didChangeDependencies();
   }
 
@@ -56,42 +56,21 @@ class MidTextState extends State<MidText> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    var x=animation.value;
     // TODO: implement build
-    return SizedBox(
-      width: double.infinity,
-      height: 300,
-      child: Center(
-        child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-           Text(
-             'Hi !, I am a ',
-            textAlign: TextAlign.right,style: TextStyle(
-            decoration: TextDecoration.none,
-            fontWeight: FontWeight.bold,
-            fontSize:
-            (false) ? 30 : (widget.box.maxWidth * 0.038),
-            color: Colors.white,
-            // const Color.fromRGBO(34, 87, 126, 1.0),
-            fontFamily: 'disp',
-          ),
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          Container(
-              color: Colors.blue,
-              alignment: Alignment(-1, animation.value / 5000.0),
-              child: Text(
-                str[index],
-                style: TextStyle(
-                  color: Colors.black,
-                  fontFamily: 'disp',
-                  decoration: TextDecoration.underline,
-                  fontWeight: FontWeight.bold,
-                  fontSize:
-                  (false) ? 50 : (widget.box.maxWidth * 0.060),
-                ),
-              )),
-        ]),
+    return Text(
+      str[index],
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        color: Colors.black.withOpacity(1-x/500),
+        fontFamily: 'disp',
+        decoration: TextDecoration.none,
+        // decoration: TextDecoration.underline,
+        // decorationColor: Colors.black,
+        // decorationThickness: 0.8-x/600,
+        fontWeight: FontWeight.bold,
+        fontSize:
+        (widget.isMobile) ? 50 : (widget.box * 0.060),
       ),
     );
   }

@@ -41,7 +41,7 @@ class ResumeButton extends StatelessWidget {
             padding: MaterialStateProperty.all(const EdgeInsets.only(
                 left: 20, top: 30, right: 20, bottom: 30)),
             shape: MaterialStateProperty.all(
-                 RoundedRectangleBorder(side: const BorderSide(width: 2),borderRadius: BorderRadius.circular(3)))),
+                 RoundedRectangleBorder(side: const BorderSide(width: 2),borderRadius: BorderRadius.circular(5)))),
         child: SizedBox(
           width: 110,
           child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [

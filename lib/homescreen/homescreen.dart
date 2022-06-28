@@ -17,7 +17,7 @@ class HomeScreenBlock extends StatelessWidget {
                 end: Alignment.bottomCenter,
                 colors: [
                   Colors.amber.shade600.withOpacity(0.48),
-                  Colors.orange.shade600.withOpacity(0.59),
+                  Colors.orange.shade600.withOpacity(0.60),
                 ]),
             borderRadius: BorderRadius.circular((isMobile) ? 0 : 8),
             border: Border.all(

@@ -14,13 +14,14 @@ class PunchHoleButton extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return  Container(
-      width: 107,
-      height: 52,
+width: 100,
+height: 50,
       decoration: BoxDecoration(
         color: (isMobile) ? Colors.transparent : Colors.white,
         borderRadius: BorderRadius.circular(60),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Tooltip(
             message: 'Github',
@@ -30,20 +31,14 @@ class PunchHoleButton extends StatelessWidget{
                 onTap: () {
                   launchUrl('https://github.com/DXTkastb');
                 },
-                child: const Padding(
-                  padding: EdgeInsets.only(
-                      left: 5, right: 5, top: 5, bottom: 5),
-                  child: Image(
-                    image: AssetImage('images/github.png'),
+                child:const Image(
+                  image: AssetImage('images/github.png'),
 
-                  ),
                 ),
               ),
             ),
           ),
-          const SizedBox(
-            width: 3,
-          ),
+
           Tooltip(
             message: 'Linkedin',
             child: MouseRegion(
@@ -53,13 +48,9 @@ class PunchHoleButton extends StatelessWidget{
                   launchUrl(
                       'https://www.linkedin.com/in/kaustubhdxt/');
                 },
-                child: const Padding(
-                  padding: EdgeInsets.only(
-                      left: 5, right: 5, top: 5, bottom: 5),
-                  child: Image(
-                    image: AssetImage('images/link.png'),
+                child: const Image(
+                  image: AssetImage('images/link.png'),
 
-                  ),
                 ),
               ),
             ),
