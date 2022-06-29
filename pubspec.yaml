@@ -36,6 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   url_launcher: ^6.1.0
   universal_html: ^2.0.8
+  html: ^0.15.0
+  http: ^0.13.4
+  email_validator: ^2.0.1
 
 dev_dependencies:
   flutter_test:

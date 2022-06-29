@@ -1,3 +1,4 @@
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/contact/feedbacks/feedbackData.dart';
 
@@ -20,21 +21,21 @@ class ContactFormState extends State<ContactForm> {
   void Function()? pressfunc() {
     if (_formKey.currentState!.validate()) {
       ScaffoldMessenger.of(context).removeCurrentSnackBar();
-      String message = 'Processing data';
-      if (feedbackData.count < 2) {
-        print(feedbackData.count);
-        feedbackData.count++;
-        feedbackData.mail[feedbackData.count] = tx1.text;
-        feedbackData.description[feedbackData.count] = tx2.text;
-      } else {
-        message = 'Overwhelming response!. Please mail dxtkastb@gmail.com';
-      }
 
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(message),
-        ),
-      );
+      Future.delayed(Duration.zero, () async {
+        bool done = await FeedbackData.addFeedBack(tx1.text, tx2.text);
+        String message = 'Feedback Sent!';
+        if (!done) {
+          message = 'Error Occurred.Please mail at dxtkastb@gmail.com';
+        }
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(message),
+            ),
+          );
+        }
+      });
     }
   }
 
@@ -64,7 +65,7 @@ class ContactFormState extends State<ContactForm> {
             padding: const EdgeInsets.only(bottom: 20),
             child: TextFormField(
               cursorColor: Colors.green,
-
+              controller: tx1,
               decoration: const InputDecoration(
                 label: Text('Email'),
 
@@ -82,6 +83,9 @@ class ContactFormState extends State<ContactForm> {
                 if (value == null || value.isEmpty) {
                   return 'Please enter email';
                 }
+                else if(!(EmailValidator.validate(value))){
+                  return 'Enter valid email';
+                }
                 return null;
               },
             ),
@@ -89,6 +93,7 @@ class ContactFormState extends State<ContactForm> {
           Padding(
             padding: const EdgeInsets.only(bottom: 30),
             child: TextFormField(
+              controller: tx2,
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return 'Please enter description';

@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart' as hyperlink;
+import '../launchlink.dart';
 
 class PunchHoleButton extends StatelessWidget{
   final bool isMobile;
   PunchHoleButton(this.isMobile);
 
-  Future<void> launchUrl(String link) async {
-    await hyperlink.launchUrl(Uri.parse(link),
-        mode: hyperlink.LaunchMode.inAppWebView);
-  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +26,7 @@ height: 50,
               cursor: SystemMouseCursors.click,
               child: GestureDetector(
                 onTap: () {
-                  launchUrl('https://github.com/DXTkastb');
+                  LaunchLink.launchUrl('https://github.com/DXTkastb');
                 },
                 child:const Image(
                   image: AssetImage('images/github.png'),
@@ -45,7 +42,7 @@ height: 50,
               cursor: SystemMouseCursors.click,
               child: GestureDetector(
                 onTap: () {
-                  launchUrl(
+                  LaunchLink.launchUrl(
                       'https://www.linkedin.com/in/kaustubhdxt/');
                 },
                 child: const Image(

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-
 import '../buttons/BarButtons.dart';
 import '../contact/form.dart';
+import '../launchlink.dart';
 
 class ContactScreen extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -94,16 +95,34 @@ class ContactScreen extends StatelessWidget {
                         Row(
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
-                            Image(
-                              height: 50,
-                              image: AssetImage('images/link.png'),
-                              fit: BoxFit.contain,
+                          children:  [
+                            MouseRegion(
+                              cursor: SystemMouseCursors.click,
+                              child: GestureDetector(
+                                onTap: (){
+
+                                  LaunchLink.launchUrl('https://www.linkedin.com/in/kaustubhdxt/');
+                                },
+                                child: const Image(
+                                  height: 50,
+                                  image: AssetImage('images/link.png'),
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
                             ),
-                            Image(
-                              image: AssetImage('images/insta.png'),
-                              fit: BoxFit.contain,
-                              height: 50,
+                            MouseRegion(
+                              cursor: SystemMouseCursors.click,
+                              child: GestureDetector(
+                                onTap: (){
+
+                                  LaunchLink.launchUrl('https://www.instagram.com/dxtkstbh/');
+                                },
+                                child: const Image(
+                                  image: AssetImage('images/insta.png'),
+                                  fit: BoxFit.contain,
+                                  height: 50,
+                                ),
+                              ),
                             ),
                           ],
                         ),
