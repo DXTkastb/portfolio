@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+
 import '../aboutme/about_me.dart';
 import '../contact/contactScreen.dart';
 import '../homescreen/homescreen.dart';
 import '../projects/ProjectsScreen.dart';
+import '../projects/projectpage.dart';
 import '../skills/carRow.dart';
-
 
 void main() {
   runApp(MyApp());
@@ -12,32 +13,30 @@ void main() {
 
 class MyApp extends StatelessWidget {
   final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
-
-
-
-      // routes: {'/skills':(_)=>SkillScreen()},
       debugShowCheckedModeBanner: false,
       home: HomeScreenBlock(),
       routes: {
-        '/stack':(_){
+        '/stack': (_) {
           return SkillScreen();
         },
-        '/aboutme':(_){
+        '/aboutme': (_) {
           return AboutMe();
         },
-        '/contact':(_){
+        '/contact': (_) {
           return ContactScreen();
         },
-        '/projects':(_){
+        '/projects': (_) {
           return ProjectScreen();
+        },
+        '/projectpage': (_) {
+          return ProjectPage();
         }
-
       },
-
     );
   }
 }

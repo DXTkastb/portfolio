@@ -1,101 +1,110 @@
 import 'package:flutter/material.dart';
+import '../data/projectdata.dart';
 import 'package:url_launcher/url_launcher.dart' as hyperlink;
 
 class ProjectCard extends StatelessWidget {
+  final Project projectData;
+  final bool navp;
+
+  const ProjectCard(this.navp, this.projectData);
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Card(
+      shadowColor: const Color.fromRGBO(2, 30, 50, 1.0),
+      elevation: 8,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      color: const Color.fromRGBO(200, 231, 255, 1.0),
+      child: Padding(
+          padding: const EdgeInsets.all(30),
+          child: HerotransitionWdiget(projectData, navp)),
+    );
+  }
+}
+
+class HerotransitionWdiget extends StatelessWidget {
+  final bool navp;
+  final Project project;
+
+  HerotransitionWdiget(
+    this.project,
+    this.navp,
+  );
+
   Future<void> launchUrl(String link) async {
     await hyperlink.launchUrl(Uri.parse(link),
         mode: hyperlink.LaunchMode.inAppWebView);
   }
 
-  final String projectname;
-  final String info;
-  final String img;
-  final List<String> stack;
-  final String codeurl;
-  final String demourl;
-
-  const ProjectCard(
-    this.projectname,
-    this.info,
-    this.stack,
-    this.codeurl,
-    this.demourl,
-    this.img,
-  );
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Container(
-      width: 400,
-      alignment: Alignment.center,
-      child: Card(
-        shadowColor: const Color.fromRGBO(2, 30, 50, 1.0),
-        elevation: 8,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        color: const Color.fromRGBO(200, 231, 255, 1.0),
+    return Hero(
+      tag: project.name,
+      child: Container(
+        width: 340,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
           children: [
-            // const ClipRRect(
-            //   borderRadius: BorderRadius.only(
-            //       topLeft: Radius.circular(20),
-            //       topRight: Radius.circular(20)),
-            //   child:  SizedBox()
-            // ),
-
             Padding(
-              padding: const EdgeInsets.all(20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                padding: const EdgeInsets.only(bottom: 20),
+                child: Text(project.name,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      decoration: TextDecoration.none,
+                      color: Colors.blueGrey.shade700,
+                      fontSize: 30,
+                    ))),
+            Padding(
+                padding: const EdgeInsets.only(bottom: 20, right: 30),
+                child: Text(
+                  project.info,
+                  style: const TextStyle(
+                      color: Colors.black,
+                      decoration: TextDecoration.none,
+                      fontSize: 16,
+                      fontWeight: FontWeight.normal),
+                )),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 20),
+              child: Wrap(
                 children: [
-                  Padding(
-                      padding: const EdgeInsets.only(bottom: 20),
-                      child: Text(projectname,
-                          style: Theme.of(context).textTheme.caption)),
-                  Padding(
-                      padding: const EdgeInsets.only(bottom: 20, right: 30),
-                      child: Text(
-                        info,
-                        style: Theme.of(context).textTheme.bodyText1,
-                      )),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 20),
-                    child: Wrap(
-                      children: [
-                        ...stack.map((e) {
-                          return StackClip(e);
-                        }).toList()
-                      ],
-                    ),
+                  ...project.stack.map((e) {
+                    return StackClip(e);
+                  }).toList()
+                ],
+              ),
+            ),
+            Row(
+              children: [
+                MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: GestureDetector(
+                    onTap: () {
+                      // launchUrl(project.code_url);
+                    },
+                    child: const BottomText('CODE'),
                   ),
-                  Row(
-                    children: [
-                      MouseRegion(
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                (navp)
+                    ? MouseRegion(
                         cursor: SystemMouseCursors.click,
                         child: GestureDetector(
                           onTap: () {
-                            launchUrl(codeurl);
-                          },
-                          child: const BottomText('CODE'),
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      MouseRegion(
-                        cursor: SystemMouseCursors.click,
-                        child: GestureDetector(
-                          onTap: () {
-                            launchUrl(demourl);
+                            Navigator.of(context)
+                                .pushNamed('/projectpage', arguments: project);
                           },
                           child: const BottomText('DEMO'),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            )
+                      )
+                    : const SizedBox(),
+              ],
+            ),
           ],
         ),
       ),
@@ -120,7 +129,12 @@ class BottomText extends StatelessWidget {
         ),
         child: Text(
           input,
-          style: Theme.of(context).textTheme.button,
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 12,
+            color: Colors.black,
+            decoration: TextDecoration.none,
+          ),
         ));
   }
 }
@@ -142,7 +156,12 @@ class StackClip extends StatelessWidget {
       ),
       child: Text(
         input,
-        style: Theme.of(context).textTheme.bodyText2,
+        style: const TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.w100,
+          fontSize: 14,
+          decoration: TextDecoration.none,
+        ),
       ),
     );
   }

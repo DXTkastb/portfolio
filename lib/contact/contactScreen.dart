@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+
 import '../buttons/BarButtons.dart';
 import '../contact/form.dart';
 import '../launchlink.dart';
 
 class ContactScreen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -12,9 +12,9 @@ class ContactScreen extends StatelessWidget {
       builder: (ctx, cons) {
         var isMobile = (cons.maxWidth < 600);
         return Container(
-          margin: isMobile
-              ? const EdgeInsets.only(left: 10, right: 10, top: 70)
-              : const EdgeInsets.all(70),
+          color: Colors.white,
+          padding:
+              const EdgeInsets.only(top: 70, left: 15, right: 15, bottom: 10),
           child: SingleChildScrollView(
             padding: const EdgeInsets.only(right: 15, left: 15),
             child: Column(
@@ -32,6 +32,7 @@ class ContactScreen extends StatelessWidget {
                       ),
                 Wrap(
                   alignment: WrapAlignment.spaceEvenly,
+                  crossAxisAlignment: WrapCrossAlignment.center,
                   children: [
                     Column(
                       mainAxisSize: MainAxisSize.min,
@@ -50,7 +51,7 @@ class ContactScreen extends StatelessWidget {
                           padding: const EdgeInsets.only(
                               top: 30, bottom: 20, left: 20, right: 20),
                           child: Text(
-                            'Hi! I\'m looking for full time job opportunities as a Web Developer.',
+                            'Hi! I\'m looking for full time job opportunities as a Web/Mobile App Developer.',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 20,
@@ -95,13 +96,13 @@ class ContactScreen extends StatelessWidget {
                         Row(
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children:  [
+                          children: [
                             MouseRegion(
                               cursor: SystemMouseCursors.click,
                               child: GestureDetector(
-                                onTap: (){
-
-                                  LaunchLink.launchUrl('https://www.linkedin.com/in/kaustubhdxt/');
+                                onTap: () {
+                                  LaunchLink.launchUrl(
+                                      'https://www.linkedin.com/in/kaustubhdxt/');
                                 },
                                 child: const Image(
                                   height: 50,
@@ -113,9 +114,9 @@ class ContactScreen extends StatelessWidget {
                             MouseRegion(
                               cursor: SystemMouseCursors.click,
                               child: GestureDetector(
-                                onTap: (){
-
-                                  LaunchLink.launchUrl('https://www.instagram.com/dxtkstbh/');
+                                onTap: () {
+                                  LaunchLink.launchUrl(
+                                      'https://www.instagram.com/dxtkstbh/');
                                 },
                                 child: const Image(
                                   image: AssetImage('images/insta.png'),
@@ -138,13 +139,10 @@ class ContactScreen extends StatelessWidget {
                       ),
                       width: 500,
                       height: 410,
-                      child: Padding(
-                          padding: const EdgeInsets.only(
-                              top: 40, bottom: 20, left: 40, right: 40),
-                          child: Scaffold(
-                            body: ContactForm(),
-                            backgroundColor: Colors.transparent,
-                          )),
+                      child: Scaffold(
+                        body: ContactForm(),
+                        backgroundColor: Colors.transparent,
+                      ),
                     ),
                   ],
                 ),

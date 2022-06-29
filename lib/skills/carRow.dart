@@ -32,9 +32,8 @@ class SkillScreen extends StatelessWidget {
         ),
       ),
       child: Container(
-        margin: const EdgeInsets.only(
-          top: 70,
-        ),
+        color: Colors.white,
+        padding: const EdgeInsets.only(top:70,left: 15,right: 15,bottom: 10),
         child: SingleChildScrollView(
           padding: const EdgeInsets.only(left: 20, right: 20),
           child: Wrap(
@@ -54,7 +53,7 @@ class SkillScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(top: 46,bottom: 10),
+                margin: const EdgeInsets.only(top: 46, bottom: 10),
                 height: 11,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -82,12 +81,9 @@ class SkillScreen extends StatelessWidget {
   }
 }
 
-
-class Level extends StatelessWidget{
-
+class Level extends StatelessWidget {
   final String lvl;
   final Color color;
-
 
   const Level(this.lvl, this.color);
 
@@ -96,17 +92,16 @@ class Level extends StatelessWidget{
     // TODO: implement build
     return Tooltip(
       preferBelow: false,
-      decoration: BoxDecoration(color: color,borderRadius: BorderRadius.circular(20)),
-      padding:const EdgeInsets.all(10),
-      textStyle: const TextStyle(fontSize: 12,color: Colors.white),
-      message:lvl,
+      decoration:
+          BoxDecoration(color: color, borderRadius: BorderRadius.circular(20)),
+      padding: const EdgeInsets.all(10),
+      textStyle: const TextStyle(fontSize: 12, color: Colors.white),
+      message: lvl,
       child: Container(
         width: 18,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(18),
-            color: color),
+            borderRadius: BorderRadius.circular(18), color: color),
       ),
     );
   }
-
 }

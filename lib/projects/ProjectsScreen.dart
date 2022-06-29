@@ -8,72 +8,48 @@ class ProjectScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Theme(
-      data: ThemeData(
-          textTheme: TextTheme(
-        headline1: const TextStyle(
-          fontSize: 60,
-          color: Colors.black,
-          fontFamily: 'disp',
-          decoration: TextDecoration.none,
-        ),
-        caption: TextStyle(
-          fontWeight: FontWeight.w500,
-          color: Colors.blueGrey.shade700,
-          fontSize: 30,
-        ),
-        bodyText1: const TextStyle(
-          fontSize: 16,
-        ),
-        bodyText2: const TextStyle(
-            color: Colors.white, fontWeight: FontWeight.w100, fontSize: 14),
-        button: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
-      )),
-      child: LayoutBuilder(
-        builder: (ctx, cons) {
-          var isSmall = (cons.maxWidth < 950);
+    return LayoutBuilder(
+      builder: (ctx, cons) {
+        var isSmall = (cons.maxWidth < 950);
 
-          return Container(
-              padding: (isSmall)
-                  ? const EdgeInsets.only(top: 70, left: 10, right: 10)
-                  : const EdgeInsets.only(top: 70, left: 15
-                  , right: 15),
-              child: SingleChildScrollView(
-                child: Wrap(
-                  spacing: 10,
-                  runSpacing: 10,
-                  crossAxisAlignment: WrapCrossAlignment.center,
-                  alignment: WrapAlignment.center,
-                  children: [
-                    (isSmall)
-                        ? const SizedBox(
-                            height: 20,
-                            width: double.infinity,
-                          )
-                        : const SizedBox(),
-                    const Align(
-                      alignment: Alignment.center,
-                      child: BarButtons('GO BACK', Color.fromRGBO(
-                          221, 239, 255, 1.0), 'back'),
-                    ),
-                    Center(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 20, top: 35),
-                        child: Text(
-                          'PROJECTS',
-                          style: Theme.of(ctx).textTheme.headline1,
+        return Container(
+          color: Colors.white,
+            padding: const EdgeInsets.only(top:70,left: 15,right: 15,bottom: 10),
+
+            child: SingleChildScrollView(
+              child: Wrap(
+                spacing: 10,
+                runSpacing: 10,
+                crossAxisAlignment: WrapCrossAlignment.center,
+                alignment: WrapAlignment.center,
+                children: [
+
+                  const Align(
+                    alignment: Alignment.center,
+                    child: BarButtons(
+                        'GO BACK', Color.fromRGBO(221, 239, 255, 1.0), 'back'),
+                  ),
+                  const Center(
+                    child: Padding(
+                      padding: EdgeInsets.only(bottom: 20, top: 35),
+                      child: Text(
+                        'PROJECTS',
+                        style: TextStyle(
+                          fontSize: 60,
+                          color: Colors.black,
+                          fontFamily: 'disp',
+                          decoration: TextDecoration.none,
                         ),
                       ),
                     ),
-                    ...ProjectData.project_list.map((e) {
-                      return ProjectCard(e.name, e.info, e.stack, e.code_url,
-                          e.demo_url, e.img);
-                    }).toList()
-                  ],
-                ),
-              ));
-        },
-      ),
+                  ),
+                  ...ProjectData.project_list.map((e) {
+                    return ProjectCard(true, e);
+                  }).toList()
+                ],
+              ),
+            ));
+      },
     );
   }
 }
