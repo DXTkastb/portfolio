@@ -32,10 +32,10 @@ class SkillScreen extends StatelessWidget {
         ),
       ),
       child: Container(
-        color: Colors.white,
+
         padding: const EdgeInsets.only(top:70,left: 15,right: 15,bottom: 10),
         child: SingleChildScrollView(
-          padding: const EdgeInsets.only(left: 20, right: 20),
+          padding: const EdgeInsets.only(left: 5, right: 5),
           child: Wrap(
             spacing: 30,
             alignment: WrapAlignment.center,
@@ -43,7 +43,7 @@ class SkillScreen extends StatelessWidget {
               const BarButtons(
                   'GO BACK', Color.fromRGBO(201, 172, 255, 1), 'back'),
               const SizedBox(
-                height: 20,
+                height: 40,
                 width: double.infinity,
               ),
               Builder(

@@ -14,7 +14,7 @@ class Skillbox extends StatelessWidget {
     var wid = DisplaySize.width_screen;
     // TODO: implement build
     return Container(
-      width: (((wid / 3) - 250) < 250) ? (wid - 10) : ((wid / 3) - 250),
+      constraints: const BoxConstraints(maxWidth: 350),
       alignment: Alignment.center,
       child: Column(
         children: [
