@@ -12,8 +12,7 @@ class ProjectPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Object? obj = (ModalRoute.of(context)!.settings.arguments);
     if (obj == null) {
-      project = const Project(
-          'Time tggg', 'dfgdhfgdhfgdhfgdhfgdhfgdhfsf', [], 'dsf', 'sdf', 'sdf');
+   return const Center(child:Text(':|',style: TextStyle(decoration: TextDecoration.none),));
     } else {
       project = obj as Project;
     }
@@ -28,7 +27,7 @@ class ProjectPage extends StatelessWidget {
             children: [
               ConstrainedBox(
                   constraints: const BoxConstraints(maxHeight: 580),
-                  child: VideoPlayer()),
+                  child: VideoPlayer(project.demo_url)),
               Container(
                 height: 580,
                 padding: const EdgeInsets.all(30),
@@ -52,6 +51,8 @@ class ProjectPage extends StatelessWidget {
 }
 
 class VideoPlayer extends StatefulWidget {
+  final String youtubeURL;
+  VideoPlayer(this.youtubeURL);
   @override
   State<StatefulWidget> createState() {
     return VideoPlayerState();
@@ -64,7 +65,7 @@ class VideoPlayerState extends State<VideoPlayer> {
   @override
   void initState() {
     youtubePlayerController =
-        YoutubePlayerController(initialVideoId: '1G4isv_Fylg');
+        YoutubePlayerController(initialVideoId: widget.youtubeURL);
     super.initState();
   }
 

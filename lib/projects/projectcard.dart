@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../data/projectdata.dart';
 import 'package:url_launcher/url_launcher.dart' as hyperlink;
 
+import '../launchlink.dart';
+
 class ProjectCard extends StatelessWidget {
   final Project projectData;
   final bool navp;
@@ -83,7 +85,7 @@ class HerotransitionWdiget extends StatelessWidget {
                   cursor: SystemMouseCursors.click,
                   child: GestureDetector(
                     onTap: () {
-                      // launchUrl(project.code_url);
+                       LaunchLink.launchUrl(project.code_url);
                     },
                     child: const BottomText('CODE'),
                   ),
