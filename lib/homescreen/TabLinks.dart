@@ -7,7 +7,7 @@ import '../homescreen/linkmenu.dart';
 class TabLinks extends StatelessWidget {
   final bool isMobile;
 
-  const TabLinks(this.isMobile);
+  const TabLinks(this.isMobile,{Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ mainAxisAlignment: MainAxisAlignment.spaceBetween,
         // Expanded(child: Container(),flex: ,),
 
         (isMobile)
-            ? Material(
+            ? const Material(
               color: Colors.transparent,
               child: LinkMenu(),
             )

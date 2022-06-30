@@ -3,12 +3,14 @@ import '../buttons/BarButtons.dart';
 import '../routelinks/route_link.dart';
 
 class LinkMenu extends StatefulWidget {
+  const LinkMenu({Key? key}) : super(key: key);
+
   @override
   State<LinkMenu> createState() => _LinkMenuState();
 }
 
 class _LinkMenuState extends State<LinkMenu> {
-  OverlayEntry? overlayEntry = null;
+  OverlayEntry? overlayEntry;
 
   void navigate(String s){
     Future.delayed(Duration.zero,(){
@@ -26,7 +28,6 @@ class _LinkMenuState extends State<LinkMenu> {
 
 
   void onpress() {
-
     overlayEntry = createOverLay();
     Overlay.of(context)!.insert(overlayEntry!);
   }

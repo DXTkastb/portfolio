@@ -3,7 +3,7 @@ import '../launchlink.dart';
 
 class PunchHoleButton extends StatelessWidget{
   final bool isMobile;
-  PunchHoleButton(this.isMobile);
+  const PunchHoleButton(this.isMobile,{Key? key}) : super(key: key);
 
 
 

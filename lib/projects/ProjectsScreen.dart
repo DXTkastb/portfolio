@@ -5,9 +5,10 @@ import '../data/projectdata.dart';
 import '../projects/projectcard.dart';
 
 class ProjectScreen extends StatelessWidget {
+  const ProjectScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return LayoutBuilder(
       builder: (ctx, cons) {
         var isSmall = (cons.maxWidth < 950);

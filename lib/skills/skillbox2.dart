@@ -5,7 +5,7 @@ import '../data/skilldata.dart';
 class SkillBox2 extends StatelessWidget {
   final MapEntry<String, String> e;
 
-  const SkillBox2(this.e);
+  const SkillBox2(this.e,{Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

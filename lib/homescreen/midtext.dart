@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class MidText extends StatefulWidget {
   final double box;
   final bool isMobile;
-  MidText(this.box,this.isMobile);
+  const MidText(this.box,this.isMobile,{Key? key}) : super(key: key);
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState

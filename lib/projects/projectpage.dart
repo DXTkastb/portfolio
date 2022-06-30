@@ -6,7 +6,9 @@ import '../data/projectdata.dart';
 import '../projects/projectcard.dart';
 
 class ProjectPage extends StatelessWidget {
-  late Project project;
+  late final Project project;
+
+  ProjectPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +54,7 @@ class ProjectPage extends StatelessWidget {
 
 class VideoPlayer extends StatefulWidget {
   final String youtubeURL;
-  VideoPlayer(this.youtubeURL);
+  const VideoPlayer(this.youtubeURL,{Key? key}) : super(key: key);
   @override
   State<StatefulWidget> createState() {
     return VideoPlayerState();

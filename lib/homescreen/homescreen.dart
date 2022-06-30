@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../homescreen/ColumnChildren.dart';
 
 class HomeScreenBlock extends StatelessWidget {
+  const HomeScreenBlock({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraint) {

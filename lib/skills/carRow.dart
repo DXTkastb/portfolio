@@ -5,6 +5,8 @@ import '../data/skilldata.dart';
 import '../skills/skillbox.dart';
 
 class SkillScreen extends StatelessWidget {
+  const SkillScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

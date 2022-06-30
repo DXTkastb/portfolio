@@ -5,6 +5,8 @@ import '../buttons/BarButtons.dart';
 import '../buttons/punch_hole.dart';
 
 class AboutMe extends StatelessWidget {
+  const AboutMe({Key? key}) : super(key: key);
+
   Future<void> launchUrl(String link) async {
     await hyperlink.launchUrl(Uri.parse(link),
         mode: hyperlink.LaunchMode.inAppWebView);

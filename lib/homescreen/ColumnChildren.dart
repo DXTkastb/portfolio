@@ -6,10 +6,10 @@ import '../homescreen/TabLinks.dart';
 import '../launchlink.dart';
 
 class ColumnChildren extends StatelessWidget {
-  BoxConstraints constraints;
+  final BoxConstraints constraints;
   final bool ismobile;
 
-  ColumnChildren(this.constraints, this.ismobile);
+  const ColumnChildren(this.constraints, this.ismobile, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

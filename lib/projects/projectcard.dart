@@ -8,7 +8,7 @@ class ProjectCard extends StatelessWidget {
   final Project projectData;
   final bool navp;
 
-  const ProjectCard(this.navp, this.projectData);
+  const ProjectCard(this.navp, this.projectData,{Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +29,9 @@ class HerotransitionWdiget extends StatelessWidget {
   final bool navp;
   final Project project;
 
-  HerotransitionWdiget(
+  const HerotransitionWdiget(
     this.project,
-    this.navp,
+    this.navp,{Key? key}) : super(key: key
   );
 
   Future<void> launchUrl(String link) async {
@@ -117,7 +117,7 @@ class HerotransitionWdiget extends StatelessWidget {
 class BottomText extends StatelessWidget {
   final String input;
 
-  const BottomText(this.input);
+  const BottomText(this.input,{Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -144,7 +144,7 @@ class BottomText extends StatelessWidget {
 class StackClip extends StatelessWidget {
   final String input;
 
-  const StackClip(this.input);
+  const StackClip(this.input,{Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

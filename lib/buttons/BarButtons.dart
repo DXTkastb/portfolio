@@ -6,7 +6,7 @@ class BarButtons extends StatelessWidget {
   final Color cc2;
   final String? path;
 
-  const BarButtons(this.insideText, this.cc2, this.path);
+  const BarButtons(this.insideText, this.cc2, this.path,{Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

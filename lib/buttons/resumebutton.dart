@@ -9,7 +9,7 @@ class ResumeButton extends StatelessWidget {
   final Function()? onpressed;
 
   const ResumeButton(
-      this.text, this.open, this.textcolor, this.bgcolor, this.onpressed);
+      this.text, this.open, this.textcolor, this.bgcolor, this.onpressed,{Key? key}) : super(key: key);
 
   Widget getico(bool b) {
     if (b) {

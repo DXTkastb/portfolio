@@ -14,6 +14,8 @@ void main() {
 class MyApp extends StatelessWidget {
   final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
 
+  MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

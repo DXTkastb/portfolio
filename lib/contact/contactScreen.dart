@@ -5,6 +5,8 @@ import '../contact/form.dart';
 import '../launchlink.dart';
 
 class ContactScreen extends StatelessWidget {
+  const ContactScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
 
@@ -137,7 +139,7 @@ class ContactScreen extends StatelessWidget {
                       ),
                       width: 600,
                       height: 410,
-                      child: Scaffold(
+                      child: const Scaffold(
                         body: ContactForm(),
                         backgroundColor: Colors.transparent,
                       ),

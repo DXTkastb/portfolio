@@ -1,10 +1,12 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
-import '../contact/feedbacks/feedbackData.dart';
 
 import '../buttons/resumebutton.dart';
+import '../contact/feedbacks/feedbackData.dart';
 
 class ContactForm extends StatefulWidget {
+  const ContactForm({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return ContactFormState();

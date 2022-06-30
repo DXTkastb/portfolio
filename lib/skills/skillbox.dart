@@ -7,7 +7,7 @@ class Skillbox extends StatelessWidget {
   final String headline;
   final Map<String, String> data;
 
-  const Skillbox(this.headline, this.data);
+  const Skillbox(this.headline, this.data,{Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
