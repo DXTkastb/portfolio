@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import './midtext.dart';
 import '../buttons/resumebutton.dart';
-import '../homescreen/TabLinks.dart';
+import '../homescreen/tab_links.dart';
 import '../launchlink.dart';
 
 class ColumnChildren extends StatelessWidget {

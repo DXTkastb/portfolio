@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import '../aboutme/about_me.dart';
 import '../contact/contactScreen.dart';
 import '../homescreen/homescreen.dart';
-import '../projects/ProjectsScreen.dart';
+import '../projects/project_screen.dart';
 import '../projects/projectpage.dart';
-import '../skills/carRow.dart';
+import '../stack/stack.dart';
 
 void main() {
   runApp(MyApp());

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../displaysize.dart';
-import '../skills/skillbox2.dart';
+import '../stack/skillbox2.dart';
 
 class Skillbox extends StatelessWidget {
   final String headline;

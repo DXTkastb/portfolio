@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../buttons/BarButtons.dart';
+import '../buttons/bar_buttons.dart';
 import '../data/skilldata.dart';
-import '../skills/skillbox.dart';
+import '../stack/skillbox.dart';
 
 class SkillScreen extends StatelessWidget {
   const SkillScreen({Key? key}) : super(key: key);

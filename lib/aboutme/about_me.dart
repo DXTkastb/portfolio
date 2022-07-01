@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart' as hyperlink;
 
-import '../buttons/BarButtons.dart';
+import '../buttons/bar_buttons.dart';
 import '../buttons/punch_hole.dart';
 
 class AboutMe extends StatelessWidget {

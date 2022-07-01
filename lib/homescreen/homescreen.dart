@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../homescreen/ColumnChildren.dart';
+import '../homescreen/column_children.dart';
 
 class HomeScreenBlock extends StatelessWidget {
   const HomeScreenBlock({Key? key}) : super(key: key);

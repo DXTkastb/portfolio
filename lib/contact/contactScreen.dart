@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../buttons/BarButtons.dart';
+import '../buttons/bar_buttons.dart';
 import '../contact/form.dart';
 import '../launchlink.dart';
 

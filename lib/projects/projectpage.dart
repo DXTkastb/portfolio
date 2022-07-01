@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
-import '../buttons/BarButtons.dart';
+import '../buttons/bar_buttons.dart';
 import '../data/projectdata.dart';
 import '../projects/projectcard.dart';
 

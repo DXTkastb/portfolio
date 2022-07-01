@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../buttons/BarButtons.dart';
+import '../buttons/bar_buttons.dart';
 import '../routelinks/route_link.dart';
 
 class LinkMenu extends StatefulWidget {
