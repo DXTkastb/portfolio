@@ -34,8 +34,9 @@ class StackScreen extends StatelessWidget {
         ),
       ),
       child: Container(
-
-        padding: const EdgeInsets.only(top:70,left: 15,right: 15,bottom: 10),
+        color: Colors.white,
+        padding:
+            const EdgeInsets.only(top: 70, left: 15, right: 15, bottom: 10),
         child: SingleChildScrollView(
           padding: const EdgeInsets.only(left: 5, right: 5),
           child: Wrap(
@@ -43,7 +44,7 @@ class StackScreen extends StatelessWidget {
             alignment: WrapAlignment.center,
             children: [
               const BarButtons(
-                  'GO BACK', Color.fromRGBO(201, 172, 255, 1), 'back'),
+                  'GO BACK', Color.fromRGBO(201, 172, 255, 1), null),
               const SizedBox(
                 height: 40,
                 width: double.infinity,

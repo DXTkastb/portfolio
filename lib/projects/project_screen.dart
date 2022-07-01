@@ -28,7 +28,7 @@ class ProjectScreen extends StatelessWidget {
                   const Align(
                     alignment: Alignment.center,
                     child: BarButtons(
-                        'GO BACK', Color.fromRGBO(221, 239, 255, 1.0), 'back'),
+                        'GO BACK', Color.fromRGBO(221, 239, 255, 1.0), null),
                   ),
                   const Center(
                     child: Padding(

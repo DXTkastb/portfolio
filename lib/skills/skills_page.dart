@@ -22,7 +22,7 @@ class SkillPage extends StatelessWidget {
                 const Center(
                   child: BarButtons(
                       'GO BACK', Color.fromRGBO(
-                      158, 221, 255, 1.0), 'back'),
+                      158, 221, 255, 1.0), null),
                 ),
                 const SizedBox(
                   width: double.infinity,

@@ -6,7 +6,7 @@ class BarButtons extends StatelessWidget {
   final Color cc2;
   final String? path;
 
-  const BarButtons(this.insideText, this.cc2, this.path,{Key? key}) : super(key: key);
+  const BarButtons(  this.insideText, this.cc2, this.path,{Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,27 +14,12 @@ class BarButtons extends StatelessWidget {
     return ElevatedButton(
         onPressed: () {
 
-          if (path == null) return;
-          if (path!.compareTo('contact') == 0) {
-            Navigator.of(context).pushNamed(RouteLink.links[insideText]!);
-            return;
-          }
-          if (path!.compareTo('project') == 0) {
-            Navigator.of(context).pushNamed(RouteLink.links[insideText]!);
-            return;
-          }
-          if (path!.compareTo('stack') == 0) {
-            Navigator.of(context).pushNamed(RouteLink.links[insideText]!);
-            return;
-          }
-          if (path!.compareTo('about me') == 0) {
-            Navigator.of(context).pushNamed('/aboutme');
-            return;
-          }
-          if (path!.compareTo('back') == 0) {
+          if (path == null) {
             Navigator.of(context).pop();
-            return;
+          } else {
+            Navigator.of(context).pushNamed(path!);
           }
+
 
 
         },

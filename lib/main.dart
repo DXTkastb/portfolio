@@ -24,10 +24,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const HomeScreenBlock(),
       routes: {
-        '/stack': (_) {
+        '/skills': (_) {
           return const SkillPage();
         },
-        '/skill': (_) {
+        '/stack': (_) {
           return const StackScreen();
         },
         '/aboutme': (_) {

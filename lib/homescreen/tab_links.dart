@@ -31,15 +31,15 @@ mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   BarButtons(
-                      'PROJECTS', Colors.teal.shade200, 'project'),
+                      'PROJECTS', Colors.teal.shade200, '/projects'),
                   BarButtons(
-                      'STACK', Colors.teal.shade200, 'stack'),
+                      'STACK', Colors.teal.shade200, '/stack'),
                   BarButtons(
-                      'SKILLS', Colors.teal.shade200, 'skill'),
+                      'SKILLS', Colors.teal.shade200, '/skills'),
                   BarButtons(
-                      'ABOUTME', Colors.teal.shade200, 'about me'),
+                      'ABOUTME', Colors.teal.shade200, '/aboutme'),
                   BarButtons(
-                      'CONTACT', Colors.teal.shade200, 'contact'),
+                      'CONTACT', Colors.teal.shade200, '/contact'),
 
                 ],
               ),

@@ -26,7 +26,7 @@ class AboutMe extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const BarButtons('GO BACK', Colors.white, 'back'),
+                const BarButtons('GO BACK', Colors.white, null),
                 SizedBox(
                     width: 600,
                     child: Padding(

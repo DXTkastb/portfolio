@@ -27,7 +27,7 @@ class ContactScreen extends StatelessWidget {
               children: [
                 Center(
                     child: BarButtons(
-                        'GO BACK', Colors.lightGreen.shade200, 'back')),
+                        'GO BACK', Colors.lightGreen.shade200, null)),
                 Wrap(
 
                   alignment: WrapAlignment.spaceEvenly,
