@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreenBlock(),
+      home: const HomeScreenBlock(),
       routes: {
         '/stack': (_) {
           return const SkillPage();

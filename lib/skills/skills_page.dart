@@ -21,7 +21,8 @@ class SkillPage extends StatelessWidget {
               children: [
                 const Center(
                   child: BarButtons(
-                      'GO BACK', Color.fromRGBO(201, 172, 255, 1), 'back'),
+                      'GO BACK', Color.fromRGBO(
+                      158, 221, 255, 1.0), 'back'),
                 ),
                 const SizedBox(
                   width: double.infinity,
@@ -31,9 +32,11 @@ class SkillPage extends StatelessWidget {
                   padding: const EdgeInsets.only(
                       right: 5, left: 5, top: 5, bottom: 5),
                   child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      image: const DecorationImage(
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(70),
+                          topRight: Radius.circular(70)),
+                      image: DecorationImage(
                           image: AssetImage('images/skillimg/pic2.jpg'),
                           fit: BoxFit.cover,
                           opacity: 0.84),
@@ -44,9 +47,7 @@ class SkillPage extends StatelessWidget {
                     width: width / 3 - 50,
                     child: Container(
                       decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(50),
-                            bottomRight: Radius.circular(50)),
+
                         gradient: LinearGradient(
                             begin: Alignment.topCenter,
                             end: Alignment.bottomCenter,
@@ -59,7 +60,7 @@ class SkillPage extends StatelessWidget {
                       ),
                       alignment: Alignment.bottomLeft,
                       padding: const EdgeInsets.all(40),
-                      child: const LowerWid('PHOTOGRAPHY','insta'),
+                      child: const LowerWid('PHOTOGRAPHY','https://www.instagram.com/treehigh6/',' explore >'),
                     ),
                   ),
                 ),
@@ -67,9 +68,11 @@ class SkillPage extends StatelessWidget {
                   padding: const EdgeInsets.only(
                       right: 5, left: 5, top: 5, bottom: 5),
                   child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      image: const DecorationImage(
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(70),
+                          topRight: Radius.circular(70)),
+                      image: DecorationImage(
                           image: AssetImage('images/skillimg/sk1.jpeg'),
                           fit: BoxFit.cover,
                           opacity: 0.84),
@@ -80,9 +83,6 @@ class SkillPage extends StatelessWidget {
                     width: width / 3 - 50,
                     child: Container(
                       decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(50),
-                            bottomRight: Radius.circular(50)),
                         gradient: LinearGradient(
                             begin: Alignment.topCenter,
                             end: Alignment.bottomCenter,
@@ -95,46 +95,45 @@ class SkillPage extends StatelessWidget {
                       ),
                       alignment: Alignment.bottomLeft,
                       padding: const EdgeInsets.all(40),
-                      child: const LowerWid('SKETCHING','insta'),
+                      child: const LowerWid('SKETCHING','https://www.instagram.com/treehigh6/',' explore >'),
                     ),
                   ),
                 ),
-                // Padding(
-                //   padding: const EdgeInsets.only(
-                //       right: 5, left: 5, top: 5, bottom: 5),
-                //   child: Container(
-                //     decoration: BoxDecoration(
-                //       borderRadius: BorderRadius.circular(50),
-                //       image: const DecorationImage(
-                //           image: AssetImage('images/skillimg/daff.jpg'),
-                //           fit: BoxFit.cover,
-                //           opacity: 0.84),
-                //     ),
-                //     constraints: BoxConstraints(
-                //         minWidth: 490,
-                //         maxHeight: (height > 650) ? 730: 590),
-                //     width: width / 3 - 50,
-                //     child: Container(
-                //       decoration: const BoxDecoration(
-                //         borderRadius: BorderRadius.only(
-                //             bottomLeft: Radius.circular(50),
-                //             bottomRight: Radius.circular(50)),
-                //         gradient: LinearGradient(
-                //             begin: Alignment.topCenter,
-                //             end: Alignment.bottomCenter,
-                //             colors: [
-                //               Colors.transparent,
-                //               Colors.transparent,
-                //               Colors.transparent,
-                //               Color.fromRGBO(0, 0, 0, 1)
-                //             ]),
-                //       ),
-                //       alignment: Alignment.bottomLeft,
-                //       padding: const EdgeInsets.all(40),
-                //       child: const LowerWid('MUSIC',''),
-                //     ),
-                //   ),
-                // ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      right: 5, left: 5, top: 5, bottom: 5),
+                  child: Container(
+                    decoration:const BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(70),
+                          topRight: Radius.circular(70)),
+                      image: DecorationImage(
+                          image: AssetImage('images/skillimg/sk2.jpeg'),
+                          fit: BoxFit.cover,
+                          opacity: 0.84),
+                    ),
+                    constraints: BoxConstraints(
+                        minWidth: 490,
+                        maxHeight: (height > 650) ? 730: 590),
+                    width: width / 3 - 50,
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              Colors.transparent,
+                              Colors.transparent,
+                              Colors.transparent,
+                              Color.fromRGBO(0, 0, 0, 1)
+                            ]),
+                      ),
+                      alignment: Alignment.bottomLeft,
+                      padding: const EdgeInsets.all(40),
+                      child: const LowerWid('MUSIC',' ','coming soon'),
+                    ),
+                  ),
+                ),
               ],
             ),
           );
@@ -143,8 +142,8 @@ class SkillPage extends StatelessWidget {
 }
 
 class LowerWid extends StatelessWidget{
-  final String text;  final String buttontext;
-  const LowerWid(this.text,this.buttontext,{Key? key}) : super(key: key);
+  final String text;  final String buttontext;final String link;
+  const LowerWid(this.text,this.link,this.buttontext,{Key? key}) : super(key: key);
 
 
   TextStyle getTextStyle(bool isButton){
@@ -173,7 +172,7 @@ class LowerWid extends StatelessWidget{
           color: Colors.white,
           decoration: TextDecoration.none
       ),),
-      CollapsibleButton(),
+       CollapsibleButton(buttontext,link),
       ],
     );
   }
