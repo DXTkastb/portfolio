@@ -69,6 +69,10 @@ flutter:
      - images/link.png
      - images/google.png
      - images/stack.png
+     - images/skillimg/pic1.jpeg
+     - images/skillimg/pic2.jpg
+     - images/skillimg/sk1.jpeg
+     - images/skillimg/sk2.jpeg
      - images/insta.png
      - images/skill/flutter.png
      - images/skill/java.png

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/skills/skills_page.dart';
 
 import '../aboutme/about_me.dart';
 import '../contact/contactScreen.dart';
@@ -24,16 +25,19 @@ class MyApp extends StatelessWidget {
       home: HomeScreenBlock(),
       routes: {
         '/stack': (_) {
-          return SkillScreen();
+          return const SkillPage();
+        },
+        '/skill': (_) {
+          return const StackScreen();
         },
         '/aboutme': (_) {
-          return AboutMe();
+          return const AboutMe();
         },
         '/contact': (_) {
-          return ContactScreen();
+          return const ContactScreen();
         },
         '/projects': (_) {
-          return ProjectScreen();
+          return const ProjectScreen();
         },
         '/projectpage': (_) {
           return ProjectPage();

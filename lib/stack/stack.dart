@@ -4,8 +4,8 @@ import '../buttons/bar_buttons.dart';
 import '../data/skilldata.dart';
 import '../stack/skillbox.dart';
 
-class SkillScreen extends StatelessWidget {
-  const SkillScreen({Key? key}) : super(key: key);
+class StackScreen extends StatelessWidget {
+  const StackScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
