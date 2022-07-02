@@ -41,7 +41,7 @@ class ProjectPage extends StatelessWidget {
                     const BarButtons(
                       'GO BACK',
                       Colors.white,
-                      'back',
+                      null,
                     ),
                   ],
                 ),
