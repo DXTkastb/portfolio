@@ -32,9 +32,9 @@ class ProjectPage extends StatelessWidget {
                   child: VideoPlayer(project.demo_url)),
               Container(
                 height: 580,
-                padding: const EdgeInsets.all(30),
+                padding: const EdgeInsets.only(left: 30,top: 15),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     HeroTransitionWidget(project, false),

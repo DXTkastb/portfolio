@@ -95,7 +95,7 @@ class SkillPage extends StatelessWidget {
                       ),
                       alignment: Alignment.bottomLeft,
                       padding: const EdgeInsets.all(40),
-                      child: const LowerWid('SKETCHING','https://www.instagram.com/treehigh6/',' explore >'),
+                      child: const LowerWid('SKETCHING','',' coming soon '),
                     ),
                   ),
                 ),

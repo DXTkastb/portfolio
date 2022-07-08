@@ -19,9 +19,9 @@ class ProjectData {
     //     'some.demo.com',
     //     'images/projectimg/galaxy.jpg'),
     Project(
-        'Reminder App',
-        'Help users by setting reminders and notifying them at appropriate time',
-        ['Flutter', 'Dart', 'SQLite'],
+        'Resk Reminder App',
+        'Help users by setting reminders and notifying them at appropriate time.\n\n \u2022  Add Daily Tasks\n\n \u2022  Set Reminders for Daily Tasks\n\n \u2022  Check progress of you Tasks \n\n \u2022  Add Brief Tasks',
+        ['Flutter', 'Dart', 'SQLite','Android'],
         'https://github.com/DXTkastb/Resk',
         'some.demo.com',
         ' '),
@@ -51,9 +51,9 @@ class ProjectData {
     //     'images/projectimg/flower.jpg'),
     Project(
         'Portfolio',
-        'Personnel project, build with Flutter, which describes my technical background and experience',
+        'Personnel project, build with Flutter, which describes my technical background and experience.\n\n \u2022  View Projects \n\n \u2022  Tech Stack \n\n \u2022  My Skills\n\n \u2022  Contact Me',
         [
-          'Flutter',
+          'Flutter Web',
           'Dart',
         ],
         'https://github.com/DXTkastb/portfolio',
