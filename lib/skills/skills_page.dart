@@ -142,8 +142,8 @@ class SkillPage extends StatelessWidget {
 }
 
 class LowerWid extends StatelessWidget{
-  final String text;  final String buttontext;final String link;
-  const LowerWid(this.text,this.link,this.buttontext,{Key? key}) : super(key: key);
+  final String text;  final String buttonText;final String link;
+  const LowerWid(this.text,this.link,this.buttonText,{Key? key}) : super(key: key);
 
 
   TextStyle getTextStyle(bool isButton){
@@ -172,7 +172,7 @@ class LowerWid extends StatelessWidget{
           color: Colors.white,
           decoration: TextDecoration.none
       ),),
-       CollapsibleButton(buttontext,link),
+       CollapsibleButton(buttonText,link),
       ],
     );
   }

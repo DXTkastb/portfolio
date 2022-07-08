@@ -85,10 +85,10 @@ class StackScreen extends StatelessWidget {
 }
 
 class Level extends StatelessWidget {
-  final String lvl;
-  final Color color;
+   final String lvl;
+   final Color color;
 
-  const Level(this.lvl, this.color);
+   const Level(this.lvl, this.color, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -13,7 +13,7 @@ class ColumnChildren extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var textwidth = constraints.maxWidth;
+    var textWidth = constraints.maxWidth;
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -32,7 +32,7 @@ class ColumnChildren extends StatelessWidget {
               style: TextStyle(
                 decoration: TextDecoration.none,
                 fontWeight: FontWeight.bold,
-                fontSize: (ismobile) ? 30 : (textwidth * 0.038),
+                fontSize: (ismobile) ? 30 : (textWidth * 0.038),
                 color: Colors.white,
                 // const Color.fromRGBO(34, 87, 126, 1.0),
                 fontFamily: 'disp',
@@ -41,7 +41,7 @@ class ColumnChildren extends StatelessWidget {
             SizedBox(
               height: (ismobile) ? 5 : 0,
             ),
-            MidText(textwidth, ismobile),
+            MidText(textWidth, ismobile),
           ]),
         ),
         Padding(

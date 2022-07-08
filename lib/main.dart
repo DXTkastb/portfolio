@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/skills/skills_page.dart';
+import '/skills/skills_page.dart';
 
 import '../aboutme/about_me.dart';
 import '../contact/contactScreen.dart';

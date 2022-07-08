@@ -57,7 +57,7 @@ class AboutMe extends StatelessWidget {
                         ],
                       ),
                     )),
-                PunchHoleButton(false),
+                const PunchHoleButton(false),
               ],
             ),
           ),

@@ -37,7 +37,7 @@ class ProjectPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    HerotransitionWdiget(project, false),
+                    HeroTransitionWidget(project, false),
                     const BarButtons(
                       'GO BACK',
                       Colors.white,

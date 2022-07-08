@@ -20,16 +20,16 @@ class ProjectCard extends StatelessWidget {
       color: const Color.fromRGBO(200, 231, 255, 1.0),
       child: Padding(
           padding: const EdgeInsets.all(30),
-          child: HerotransitionWdiget(projectData, navp)),
+          child: HeroTransitionWidget(projectData, navp)),
     );
   }
 }
 
-class HerotransitionWdiget extends StatelessWidget {
+class HeroTransitionWidget extends StatelessWidget {
   final bool navp;
   final Project project;
 
-  const HerotransitionWdiget(
+  const HeroTransitionWidget(
     this.project,
     this.navp,{Key? key}) : super(key: key
   );
