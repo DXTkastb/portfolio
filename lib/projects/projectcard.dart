@@ -57,7 +57,7 @@ class HeroTransitionWidget extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                       decoration: TextDecoration.none,
                       color: Colors.blueGrey.shade700,
-                      fontSize: 30,
+                      fontSize: 32,
                     ))),
             Padding(
                 padding: const EdgeInsets.only(bottom: 20, right: 30),

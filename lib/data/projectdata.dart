@@ -23,7 +23,7 @@ class ProjectData {
         'Help users by setting reminders and notifying them at appropriate time.\n\n \u2022  Add Daily Tasks\n\n \u2022  Set Reminders for Daily Tasks\n\n \u2022  Check progress of you Tasks \n\n \u2022  Add Brief Tasks',
         ['Flutter', 'Dart', 'SQLite','Android'],
         'https://github.com/DXTkastb/Resk',
-        'some.demo.com',
+        'XSBiWxVDPDc',
         ' '),
     // Project(
     //     'Talback',
