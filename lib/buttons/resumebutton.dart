@@ -39,7 +39,7 @@ class ResumeButton extends StatelessWidget {
               // return const Color.fromRGBO(250, 255, 175, 1.0);
             }),
             padding: MaterialStateProperty.all(const EdgeInsets.only(
-                left: 20, top: 30, right: 20, bottom: 30)),
+                left: 21, top: 31, right: 21, bottom: 31)),
             shape: MaterialStateProperty.all(
                  RoundedRectangleBorder(side: const BorderSide(width: 2),borderRadius: BorderRadius.circular(5)))),
         child: SizedBox(
@@ -48,7 +48,7 @@ class ResumeButton extends StatelessWidget {
             Text(
               text,
               style: TextStyle(fontFamily: 'Roboto',
-                  fontSize: 17, fontWeight: FontWeight.w700, color: textcolor,),
+                  fontSize: 16, fontWeight: FontWeight.bold, color: textcolor,),
             ),
             getico(open)
           ]),

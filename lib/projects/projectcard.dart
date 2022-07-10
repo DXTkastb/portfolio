@@ -54,7 +54,7 @@ class HeroTransitionWidget extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 20),
                 child: Text(project.name,
                     style: TextStyle(
-                      fontWeight: FontWeight.w400,fontFamily: 'Roboto',
+                      fontWeight: FontWeight.w500,fontFamily: 'Roboto',
                       decoration: TextDecoration.none,
                       color: Colors.blueGrey.shade700,
                       fontSize: 33,
@@ -67,7 +67,7 @@ class HeroTransitionWidget extends StatelessWidget {
                       color: Colors.black,fontFamily: 'Roboto',
                       decoration: TextDecoration.none,
                       fontSize: 16,
-                      fontWeight: FontWeight.normal),
+                      fontWeight: FontWeight.w400),
                 )),
             Padding(
               padding: const EdgeInsets.only(bottom: 20),
@@ -132,7 +132,7 @@ class BottomText extends StatelessWidget {
         child: Text(
           input,
           style: const TextStyle(
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w700,
             fontSize: 12,fontFamily: 'Roboto',
             color: Colors.black,
             decoration: TextDecoration.none,
@@ -160,8 +160,8 @@ class StackClip extends StatelessWidget {
         input,
         style: const TextStyle(
           color: Colors.white,fontFamily: 'Roboto',
-          fontWeight: FontWeight.w500,
-          fontSize: 14,
+          fontWeight: FontWeight.w400,
+          fontSize: 14.4,
           decoration: TextDecoration.none,
         ),
       ),

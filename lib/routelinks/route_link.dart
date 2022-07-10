@@ -5,7 +5,7 @@ class RouteLink {
     'STACK':"/stack",
     'CONTACT':"/contact",
     'PROJECTS':'/projects',
-    'ABOUTME':'/aboutme'
+    'ABOUT ME':'/aboutme'
   }
 ;
 }

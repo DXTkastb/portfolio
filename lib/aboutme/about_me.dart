@@ -48,9 +48,9 @@ class AboutMe extends StatelessWidget {
                             '\nBuilding solutions that solve problems motivates me a lot. Also, being a team person\, I highly value optimistic attitude and a competitive atmosphere.',
                             style: TextStyle(
                               fontSize: 18,
-                              color: Colors.white,
+                              color: Colors.white,fontFamily: 'Roboto',
                               decoration: TextDecoration.none,
-                              fontWeight: FontWeight.w100,
+                              fontWeight: FontWeight.w500,
                             ),
                             textAlign: TextAlign.center,
                           ),

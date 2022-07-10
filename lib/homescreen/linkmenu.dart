@@ -13,7 +13,7 @@ class _LinkMenuState extends State<LinkMenu> {
   OverlayEntry? overlayEntry;
   TextStyle textStyle = TextStyle(
       fontSize: 25, fontFamily: 'Roboto',
-      color: Colors.teal.shade400,
+      color: Colors.teal.shade400,fontWeight: FontWeight.bold,
       decoration: TextDecoration.none);
 
   void navigate(String s) {
@@ -85,10 +85,7 @@ class _LinkMenuState extends State<LinkMenu> {
                     },
                     child: Text(
                       'PROJECTS',
-                      style: TextStyle(
-                          fontSize: 25, fontFamily: 'Roboto',
-                          color: Colors.teal.shade400,
-                          decoration: TextDecoration.none),
+                      style: textStyle
                     ),
                   ),
                   const SizedBox(
@@ -122,7 +119,7 @@ class _LinkMenuState extends State<LinkMenu> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      navigate('ABOUTME')
+                      navigate('ABOUT ME')
                       ;
                     },
                     child: Text(

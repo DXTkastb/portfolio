@@ -37,7 +37,7 @@ mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   BarButtons(
                       'SKILLS', Colors.teal.shade200, '/skills'),
                   BarButtons(
-                      'ABOUTME', Colors.teal.shade200, '/aboutme'),
+                      'ABOUT ME', Colors.teal.shade200, '/aboutme'),
                   BarButtons(
                       'CONTACT', Colors.teal.shade200, '/contact'),
 

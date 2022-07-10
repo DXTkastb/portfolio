@@ -34,7 +34,7 @@ class BarButtons extends StatelessWidget {
         child: Text(
           insideText,
           style:
-              const TextStyle(fontStyle: FontStyle.normal, color: Colors.black,fontSize: 14,fontFamily: 'Roboto',),
+              const TextStyle(fontWeight: FontWeight.w500, color: Colors.black,fontSize: 14,fontFamily: 'Roboto',),
         ));
   }
 }
@@ -66,7 +66,7 @@ class BarButtons2 extends StatelessWidget {
           Icons.menu_outlined,
           color: Colors.black,
           size: 19.0,
-          semanticLabel: 'Resume',
+          semanticLabel: 'Menu',
         ));
   }
 }
