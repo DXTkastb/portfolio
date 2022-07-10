@@ -11,20 +11,21 @@ class LinkMenu extends StatefulWidget {
 
 class _LinkMenuState extends State<LinkMenu> {
   OverlayEntry? overlayEntry;
+  TextStyle textStyle = TextStyle(
+      fontSize: 25, fontFamily: 'Roboto',
+      color: Colors.teal.shade400,
+      decoration: TextDecoration.none);
 
-  void navigate(String s){
-    Future.delayed(Duration.zero,(){
-    }).then((value) {
+  void navigate(String s) {
+    Future.delayed(Duration.zero, () {}).then((value) {
       overlayEntry!.remove();
-      overlayEntry=null;
-
-
+      overlayEntry = null;
     }).then((value) {
-
-      Future.delayed( const Duration(microseconds: 1000),(){   Navigator.of(context).pushNamed(RouteLink.links[s]!);});});
-
+      Future.delayed(const Duration(microseconds: 1000), () {
+        Navigator.of(context).pushNamed(RouteLink.links[s]!);
+      });
+    });
   }
-
 
 
   void onpress() {
@@ -38,7 +39,10 @@ class _LinkMenuState extends State<LinkMenu> {
   }
 
   OverlayEntry createOverLay() {
-    var h = MediaQuery.of(context).size.height;
+    var h = MediaQuery
+        .of(context)
+        .size
+        .height;
 
 
     return OverlayEntry(builder: (context) {
@@ -64,7 +68,7 @@ class _LinkMenuState extends State<LinkMenu> {
                             'X',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
-
+                                fontFamily: 'Roboto',
                                 fontSize: 30,
                                 color: Colors.amber.shade600),
                           )),
@@ -75,18 +79,14 @@ class _LinkMenuState extends State<LinkMenu> {
               Column(
                 children: [
                   GestureDetector(
-                    onTap: (){
-
-
+                    onTap: () {
                       navigate('PROJECTS')
                       ;
-
-
                     },
                     child: Text(
                       'PROJECTS',
                       style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 25, fontFamily: 'Roboto',
                           color: Colors.teal.shade400,
                           decoration: TextDecoration.none),
                     ),
@@ -95,64 +95,52 @@ class _LinkMenuState extends State<LinkMenu> {
                     height: 15,
                   ),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       navigate('STACK')
                       ;
                     },
                     child: Text(
                       'STACK',
-                      style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.teal.shade400,
-                          decoration: TextDecoration.none),
+                      style: textStyle,
                     ),
                   ),
                   const SizedBox(
                     height: 15,
                   ),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       navigate('SKILLS')
                       ;
                     },
                     child: Text(
                       'SKILLS',
-                      style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.teal.shade400,
-                          decoration: TextDecoration.none),
+                      style: textStyle,
                     ),
                   ),
                   const SizedBox(
                     height: 15,
                   ),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       navigate('ABOUTME')
                       ;
                     },
                     child: Text(
                       'ABOUT ME',
-                      style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.teal.shade400,
-                          decoration: TextDecoration.none),
+                      style: textStyle,
                     ),
                   ),
                   const SizedBox(
                     height: 15,
                   ),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       navigate('CONTACT')
                       ;
                     },
                     child: Text(
                       'CONTACT ME',
-                      style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.teal.shade400,
-                          decoration: TextDecoration.none),
+                      style: textStyle,
                     ),
                   ),
                 ],
@@ -171,4 +159,5 @@ class _LinkMenuState extends State<LinkMenu> {
     }
     super.dispose();
   }
+
 }

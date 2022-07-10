@@ -47,7 +47,7 @@ class ResumeButton extends StatelessWidget {
           child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Text(
               text,
-              style: TextStyle(
+              style: TextStyle(fontFamily: 'Roboto',
                   fontSize: 17, fontWeight: FontWeight.w700, color: textcolor,),
             ),
             getico(open)

@@ -34,7 +34,7 @@ class BarButtons extends StatelessWidget {
         child: Text(
           insideText,
           style:
-              const TextStyle(fontStyle: FontStyle.normal, color: Colors.black,fontSize: 14),
+              const TextStyle(fontStyle: FontStyle.normal, color: Colors.black,fontSize: 14,fontFamily: 'Roboto',),
         ));
   }
 }

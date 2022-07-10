@@ -55,7 +55,7 @@ class ContactScreen extends StatelessWidget {
                             child: Text(
                               'Hi! I\'m looking for full time job opportunities as a Web/Mobile App Developer.',
                               textAlign: TextAlign.center,
-                              style: TextStyle(
+                              style: TextStyle(fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w500,
                                 fontSize: 20,
                                 color: Colors.green.shade900,
@@ -83,7 +83,7 @@ class ContactScreen extends StatelessWidget {
                                 ),
                                 SelectableText(
                                   'dxtkastb@gmail.com',
-                                  style: TextStyle(
+                                  style: TextStyle(fontFamily: 'Roboto',
                                     color: Color.fromRGBO(0, 0, 0, 1.0),
                                     fontSize: 19, fontWeight: FontWeight.w700,decoration: TextDecoration.none,
                                   ),

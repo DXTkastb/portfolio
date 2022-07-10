@@ -84,7 +84,7 @@ class ContactFormState extends State<ContactForm> {
 
                   // fillColor: Color.fromRGBO(161, 226, 255, 1.0),
 
-                  labelStyle: TextStyle(color: Colors.black87, fontSize: 17),
+                  labelStyle: TextStyle(color: Colors.black87,fontFamily: 'Roboto', fontSize: 17),
                   enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.black26)),
                   focusedBorder: UnderlineInputBorder(
@@ -118,7 +118,7 @@ class ContactFormState extends State<ContactForm> {
                 maxLines: 3,
                 decoration: const InputDecoration(
                   label: Text('Description/Feedback'),
-                  labelStyle: TextStyle(color: Colors.black87, fontSize: 17),
+                  labelStyle: TextStyle(color: Colors.black87, fontFamily: 'Roboto',fontSize: 17),
                   enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.black26)),
                   focusedBorder: UnderlineInputBorder(
