@@ -14,12 +14,11 @@ class HomeScreenBlock extends StatelessWidget {
           constraints: BoxConstraints(
               minHeight: constraint.maxHeight - ((!isMobile) ? 160 : 0)),
           decoration: BoxDecoration(
-            gradient: LinearGradient(
+            gradient: const LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Colors.amber.shade600.withOpacity(0.48),
-                  Colors.orange.shade600.withOpacity(0.60),
+                  Color.fromRGBO(255, 179, 0, 0.48), Color.fromRGBO(251, 140, 0, 0.60),
                 ]),
             borderRadius: BorderRadius.circular((isMobile) ? 0 : 8),
             border: Border.all(

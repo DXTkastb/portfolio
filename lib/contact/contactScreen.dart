@@ -14,7 +14,7 @@ class ContactScreen extends StatelessWidget {
     return  Container(
       color: Colors.white,
       padding:
-      const EdgeInsets.only(top: 70, bottom: 10),
+      const EdgeInsets.only( bottom: 10),
       child: LayoutBuilder(builder: (ctx,conx){
         var isMobile=(conx.maxWidth<600);
         return SingleChildScrollView(
@@ -26,14 +26,17 @@ class ContactScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Center(
-                    child: BarButtons(
-                        'GO BACK', Colors.lightGreen.shade200, null)),
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 70),
+                      child: BarButtons(
+                          'GO BACK', Colors.lightGreen.shade200, null),
+                    )),
                 Wrap(
 
                   alignment: WrapAlignment.spaceEvenly,
 
                   children: [
-                    Container(
+                    SizedBox(
 
                       height: 410,
                       child: Column(
@@ -145,7 +148,7 @@ class ContactScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 60,),
+const SizedBox(height: 50,),
               ],
             ),
           ),

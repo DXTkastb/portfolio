@@ -36,13 +36,17 @@ class StackScreen extends StatelessWidget {
       child: Container(
         color: Colors.white,
         padding:
-            const EdgeInsets.only(top: 70, left: 15, right: 15, bottom: 10),
+            const EdgeInsets.only(left: 15, right: 15, bottom: 10),
         child: SingleChildScrollView(
           padding: const EdgeInsets.only(left: 5, right: 5),
           child: Wrap(
             spacing: 30,
             alignment: WrapAlignment.center,
             children: [
+              const Align(
+                alignment: Alignment.center,
+                child: SizedBox(height: 70,),
+              ),
               const BarButtons(
                   'GO BACK', Color.fromRGBO(201, 172, 255, 1), null),
               const SizedBox(

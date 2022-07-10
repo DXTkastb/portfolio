@@ -15,7 +15,7 @@ class ProjectScreen extends StatelessWidget {
 
         return Container(
           color: Colors.white,
-            padding: const EdgeInsets.only(top:70,left: 15,right: 15,bottom: 10),
+            padding: const EdgeInsets.only(left: 15,right: 15,bottom: 10),
 
             child: SingleChildScrollView(
               child: Wrap(
@@ -24,7 +24,10 @@ class ProjectScreen extends StatelessWidget {
                 crossAxisAlignment: WrapCrossAlignment.center,
                 alignment: WrapAlignment.center,
                 children: [
-
+                  const Align(
+                    alignment: Alignment.center,
+                    child: SizedBox(height: 70,),
+                  ),
                   const Align(
                     alignment: Alignment.center,
                     child: BarButtons(

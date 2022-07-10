@@ -17,7 +17,7 @@ class AboutMe extends StatelessWidget {
     // TODO: implement build
     return Container(
       color: Colors.black,
-      padding: const EdgeInsets.only(top: 70, bottom: 70),
+
       child: LayoutBuilder(builder: (ctx, cons) {
         return SingleChildScrollView(
           child: ConstrainedBox(
@@ -26,6 +26,10 @@ class AboutMe extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                const Align(
+                  alignment: Alignment.center,
+                  child: SizedBox(height: 70,),
+                ),
                 const BarButtons('GO BACK', Colors.white, null),
                 SizedBox(
                     width: 600,
@@ -57,7 +61,10 @@ class AboutMe extends StatelessWidget {
                         ],
                       ),
                     )),
-                const PunchHoleButton(false),
+                const PunchHoleButton(false),const Align(
+                  alignment: Alignment.center,
+                  child: SizedBox(height: 70,),
+                ),
               ],
             ),
           ),

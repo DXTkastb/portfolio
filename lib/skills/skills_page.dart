@@ -10,7 +10,7 @@ class SkillPage extends StatelessWidget {
     // TODO: implement build
     return Container(
       color: Colors.black,
-        padding: const EdgeInsets.only(top: 70, left: 10, right: 10, bottom: 0),
+        padding: const EdgeInsets.only( left: 10, right: 10, bottom: 10),
         child: LayoutBuilder(builder: (ctx, cons) {
           var width = cons.maxWidth;
           var height = cons.maxHeight - 90;
@@ -19,6 +19,10 @@ class SkillPage extends StatelessWidget {
               alignment: WrapAlignment.center,
               spacing: 10,
               children: [
+                const Align(
+                  alignment: Alignment.center,
+                  child: SizedBox(height: 70,),
+                ),
                 const Center(
                   child: BarButtons(
                       'GO BACK', Color.fromRGBO(
