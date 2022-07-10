@@ -54,10 +54,10 @@ class HeroTransitionWidget extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 20),
                 child: Text(project.name,
                     style: TextStyle(
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       decoration: TextDecoration.none,
                       color: Colors.blueGrey.shade700,
-                      fontSize: 32,
+                      fontSize: 33,
                     ))),
             Padding(
                 padding: const EdgeInsets.only(bottom: 20, right: 30),
@@ -160,7 +160,7 @@ class StackClip extends StatelessWidget {
         input,
         style: const TextStyle(
           color: Colors.white,
-          fontWeight: FontWeight.w100,
+          fontWeight: FontWeight.w500,
           fontSize: 14,
           decoration: TextDecoration.none,
         ),

@@ -56,6 +56,7 @@ class ContactScreen extends StatelessWidget {
                               'Hi! I\'m looking for full time job opportunities as a Web/Mobile App Developer.',
                               textAlign: TextAlign.center,
                               style: TextStyle(
+                                fontWeight: FontWeight.w500,
                                 fontSize: 20,
                                 color: Colors.green.shade900,
                                 decoration: TextDecoration.none,
@@ -84,9 +85,7 @@ class ContactScreen extends StatelessWidget {
                                   'dxtkastb@gmail.com',
                                   style: TextStyle(
                                     color: Color.fromRGBO(0, 0, 0, 1.0),
-                                    fontSize: 19,
-                                    decoration: TextDecoration.none,
-                                    fontWeight: FontWeight.w900,
+                                    fontSize: 19, fontWeight: FontWeight.w700,decoration: TextDecoration.none,
                                   ),
                                 ),
                               ],

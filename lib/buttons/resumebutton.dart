@@ -48,7 +48,7 @@ class ResumeButton extends StatelessWidget {
             Text(
               text,
               style: TextStyle(
-                  fontSize: 17, fontWeight: FontWeight.w900, color: textcolor),
+                  fontSize: 17, fontWeight: FontWeight.w700, color: textcolor,),
             ),
             getico(open)
           ]),

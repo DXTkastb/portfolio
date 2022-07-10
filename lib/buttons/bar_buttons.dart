@@ -34,7 +34,7 @@ class BarButtons extends StatelessWidget {
         child: Text(
           insideText,
           style:
-              const TextStyle(fontWeight: FontWeight.bold, color: Colors.black,fontSize: 14),
+              const TextStyle(fontStyle: FontStyle.normal, color: Colors.black,fontSize: 14),
         ));
   }
 }
@@ -53,10 +53,10 @@ class BarButtons2 extends StatelessWidget {
     return ElevatedButton(
         onPressed: onpressed,
         style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.resolveWith((states) => Colors.teal.shade300),
+            backgroundColor: MaterialStateProperty.all(Colors.teal.shade300),
             // const Color.fromRGBO(85, 132, 172, 1.0)),
-            padding: MaterialStateProperty.resolveWith((states) =>
-            const EdgeInsets.all(30)),
+            padding: MaterialStateProperty.all( const EdgeInsets.all(30))
+           ,
             shape: MaterialStateProperty.resolveWith((states) =>
                 RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(55),
