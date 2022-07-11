@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../buttons/bar_buttons.dart';
 import '../routelinks/route_link.dart';
 
@@ -12,20 +13,21 @@ class LinkMenu extends StatefulWidget {
 class _LinkMenuState extends State<LinkMenu> {
   OverlayEntry? overlayEntry;
   TextStyle textStyle = TextStyle(
-      fontSize: 25, fontFamily: 'Roboto',
-      color: Colors.teal.shade400,fontWeight: FontWeight.bold,
+      fontSize: 25,
+      fontFamily: 'Roboto',
+      color: Colors.teal.shade400,
+      fontWeight: FontWeight.bold,
       decoration: TextDecoration.none);
 
   void navigate(String s) async {
-    await  Future.delayed(Duration.zero,(){
+    await Future.delayed(Duration.zero, () {
       overlayEntry!.remove();
       overlayEntry = null;
     });
-    await Future.delayed(const Duration(seconds: 1),(){
+    await Future.delayed(const Duration(milliseconds: 100), () {
       Navigator.of(context).pushNamed(RouteLink.links[s]!);
     });
   }
-
 
   void onpress() {
     overlayEntry = createOverLay();
@@ -38,13 +40,9 @@ class _LinkMenuState extends State<LinkMenu> {
   }
 
   OverlayEntry createOverLay() {
-    var h = MediaQuery
-        .of(context)
-        .size
-        .height;
+    var h = MediaQuery.of(context).size.height;
 
-
-    return OverlayEntry(builder: (context) {
+    return OverlayEntry(builder: (ctx) {
       return Container(
           padding: const EdgeInsets.all(20),
           alignment: Alignment.center,
@@ -56,8 +54,8 @@ class _LinkMenuState extends State<LinkMenu> {
                   Positioned(
                     right: 10,
                     top: 10,
-                    child: TextButton(
-                      onPressed: () {
+                    child: GestureDetector(
+                      onTap: () {
                         overlayEntry!.remove();
                         overlayEntry = null;
                       },
@@ -69,6 +67,7 @@ class _LinkMenuState extends State<LinkMenu> {
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'Roboto',
                                 fontSize: 30,
+                                decoration: TextDecoration.none,
                                 color: Colors.amber.shade600),
                           )),
                     ),
@@ -79,21 +78,16 @@ class _LinkMenuState extends State<LinkMenu> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      navigate('PROJECTS')
-                      ;
+                      navigate('PROJECTS');
                     },
-                    child: Text(
-                      'PROJECTS',
-                      style: textStyle
-                    ),
+                    child: Text('PROJECTS', style: textStyle),
                   ),
                   const SizedBox(
                     height: 15,
                   ),
                   GestureDetector(
                     onTap: () {
-                      navigate('STACK')
-                      ;
+                      navigate('STACK');
                     },
                     child: Text(
                       'STACK',
@@ -105,8 +99,7 @@ class _LinkMenuState extends State<LinkMenu> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      navigate('SKILLS')
-                      ;
+                      navigate('SKILLS');
                     },
                     child: Text(
                       'SKILLS',
@@ -118,8 +111,7 @@ class _LinkMenuState extends State<LinkMenu> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      navigate('ABOUT ME')
-                      ;
+                      navigate('ABOUT ME');
                     },
                     child: Text(
                       'ABOUT ME',
@@ -131,8 +123,7 @@ class _LinkMenuState extends State<LinkMenu> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      navigate('CONTACT')
-                      ;
+                      navigate('CONTACT');
                     },
                     child: Text(
                       'CONTACT ME',
@@ -155,5 +146,4 @@ class _LinkMenuState extends State<LinkMenu> {
     }
     super.dispose();
   }
-
 }
