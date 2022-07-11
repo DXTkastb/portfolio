@@ -16,14 +16,13 @@ class _LinkMenuState extends State<LinkMenu> {
       color: Colors.teal.shade400,fontWeight: FontWeight.bold,
       decoration: TextDecoration.none);
 
-  void navigate(String s) {
-    Future.delayed(Duration.zero, () {}).then((value) {
+  void navigate(String s) async {
+    await  Future.delayed(Duration.zero,(){
       overlayEntry!.remove();
       overlayEntry = null;
-    }).then((value) {
-      Future.delayed(const Duration(microseconds: 1000), () {
-        Navigator.of(context).pushNamed(RouteLink.links[s]!);
-      });
+    });
+    await Future.delayed(const Duration(seconds: 1),(){
+      Navigator.of(context).pushNamed(RouteLink.links[s]!);
     });
   }
 
