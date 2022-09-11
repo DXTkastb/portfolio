@@ -19,24 +19,22 @@ class ProjectData {
     //     'some.demo.com',
     //     'images/projectimg/galaxy.jpg'),
     Project(
-        'Resk Reminder App',
-        'Help users by setting reminders and notifying them at appropriate time.\n\n \u2022  Add Daily Tasks\n\n \u2022  Set Reminders for Daily Tasks\n\n \u2022  Check progress of you Tasks \n\n \u2022  Add Brief Tasks',
-        ['Flutter', 'Dart', 'SQLite','Android'],
-        'https://github.com/DXTkastb/Resk',
-        'XSBiWxVDPDc',
-        ' '),
-    // Project(
-    //     'Talback',
-    //     'Bored of typing feedbacks/reviews? Talback Widget enables external applications to get reviews using Google\'s Speech-To-Text Cloud Api. When integrated'
-    //         ' users can tap a button and convey their thoughts via speech, which will be shared to respective businesses/companies',
-    //     [
-    //       'Flutter',
-    //       'Dart',
-    //       'RestFul API',
-    //     ],
-    //     'https://github.com/DXTkastb',
-    //     'some.demo.com',
-    //     'images/projectimg/forest.jpg'),
+      'Resk Reminder App',
+      'Help users by setting reminders and notifying them at appropriate time.\n\n \u2022  Add Daily Tasks\n\n \u2022  Set Reminders for Daily Tasks\n\n \u2022  Check progress of you Tasks \n\n \u2022  Add Brief Tasks',
+      ['Flutter', 'Dart', 'SQLite', 'Android'],
+      'https://github.com/DXTkastb/Resk',
+      'XSBiWxVDPDc',
+    ),
+    Project(
+      'Easy-Feedback',
+      '\u2022  App uses Google Cloud Speech-To-Text Api to collect feedback data via user audio in real time.'
+          '\n\n \u2022  The data collected is sent to backend(Spring App, SQL database) where it is processed with GCP Natural Language Api and stored in database.'
+          '\n\n \u2022  Natural Language Api helps to retrieve useful information about speech data such as user likes/dislikes/rating.'
+          '\n\n \u2022  Businesses/Organisations can view feedbacks, provided by users, using web app(Flutter Web App).',
+      ['Flutter', 'Spring', 'MySQL','RestFul API', 'Server Sent Events'],
+      'https://github.com/DXTkastb/EasyFeedback',
+      'some.demo.com',
+    ),
     // Project(
     //     'Multiplayer HoneyComb Maze',
     //     'Inspired by famous television show Takeshi\'s Castle, this 2D multiplayer game requires two players to find hidden keys inside a maze. Sounds easy? play the game to find it yourself.',
@@ -50,15 +48,15 @@ class ProjectData {
     //     'some.demo.com',
     //     'images/projectimg/flower.jpg'),
     Project(
-        'Portfolio',
-        'Personnel project, build with Flutter, which describes my technical background and experience.\n\n \u2022  View Projects \n\n \u2022  Tech Stack \n\n \u2022  My Skills\n\n \u2022  Contact Me',
-        [
-          'Flutter Web',
-          'Dart',
-        ],
-        'https://github.com/DXTkastb/portfolio',
-        ' ',
-        'images/projectimg/portfolio.jpg'),
+      'Portfolio',
+      'Personnel project, build with Flutter, which describes my technical background and experience.\n\n \u2022  View Projects \n\n \u2022  Tech Stack \n\n \u2022  My Skills\n\n \u2022  Contact Me',
+      [
+        'Flutter Web',
+        'Dart',
+      ],
+      'https://github.com/DXTkastb/portfolio',
+      ' ',
+    ),
     // Project(
     //     'MLTags',
     //     'Suggest hashtags for an image. Using Google Computer Vision this app helps users generate hashtags for an image.',
@@ -78,8 +76,12 @@ class Project {
   final List<String> stack;
   final String code_url;
   final String demo_url;
-  final String img;
 
   const Project(
-      this.name, this.info, this.stack, this.code_url, this.demo_url, this.img);
+    this.name,
+    this.info,
+    this.stack,
+    this.code_url,
+    this.demo_url,
+  );
 }
