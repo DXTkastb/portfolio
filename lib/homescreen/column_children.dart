@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import './midtext.dart';
 import '../buttons/resumebutton.dart';
 import '../homescreen/tab_links.dart';
@@ -48,7 +47,7 @@ class ColumnChildren extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 30),
           child: ResumeButton("RESUME", true, Colors.black,
               const Color.fromRGBO(250, 255, 152, 1.0), () {
-
+                LaunchLink.launchUrl("https://docs.google.com/document/d/1JgUbsRDl-ac1ZLjSu_wd4498qYWJG7VqCCSGQU1NJAs/edit?usp=sharing");
           }),
         ),
       ],
