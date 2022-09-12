@@ -48,10 +48,8 @@ class ProjectScreen extends StatelessWidget {
                     ),
                   ),
                   ...ProjectData.project_list.map((e) {
-                    if(e.name.compareTo('Portfolio')==0) {
-                      return ProjectCard(false, e);
-                    }
-                    return ProjectCard(true, e);
+                    bool codeonly = (e.demo_url.isEmpty);
+                      return ProjectCard(!codeonly, e);
                   }).toList()
                 ],
               ),

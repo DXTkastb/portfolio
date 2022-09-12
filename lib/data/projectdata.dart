@@ -31,7 +31,7 @@ class ProjectData {
           '\n\n \u2022  The data collected is sent to backend(Spring App, SQL database) where it is processed with GCP Natural Language Api and stored in database.'
           '\n\n \u2022  Natural Language Api helps to retrieve useful information about speech data such as user likes/dislikes/rating.'
           '\n\n \u2022  Businesses/Organisations can view feedbacks, provided by users, using web app(Flutter Web App).',
-      ['Flutter', 'Spring', 'MySQL','RestFul API', 'Server Sent Events'],
+      ['Flutter', 'Spring', 'MySQL', 'RestFul API', 'Server Sent Events'],
       'https://github.com/DXTkastb/EasyFeedback',
       'some.demo.com',
     ),
@@ -55,7 +55,22 @@ class ProjectData {
         'Dart',
       ],
       'https://github.com/DXTkastb/portfolio',
-      ' ',
+      '',
+    ),
+    Project(
+      'Fatigue Detection',
+      'Detecting fatigue in vehicle drivers using EEG Brain signals.[DRDO Group Project.Only Certificate available]'
+          '\n\n \u2022 EEG data cleaning using Independent Component Analysis(ICA)'
+          '\n\n \u2022 Features such as power-spectral-density, spectral entropy, median frequency were calculated.'
+          '\n\n \u2022 Training feature data using Support Vector Machine(SVM). Accuracy of 71±1.2% reached.(test size:25%)'
+          '\n\n \u2022 Model deployed on Flask Web App to check driver fatigue level and alert the person in real time',
+      [
+        'Python',
+        'Flask',
+        'Server Sent Events',
+      ],
+      'https://drive.google.com/file/d/1SswKD7vnlpbZIBThtxJudVIZk-V2bXRg/view?usp=sharing',
+      '',
     ),
     // Project(
     //     'MLTags',
