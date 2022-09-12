@@ -33,7 +33,7 @@ class ProjectData {
           '\n\n \u2022  Businesses/Organisations can view feedbacks, provided by users, using web app(Flutter Web App).',
       ['Flutter', 'Spring', 'MySQL', 'RestFul API', 'Server Sent Events'],
       'https://github.com/DXTkastb/EasyFeedback',
-      'some.demo.com',
+      'YZAfR7uYI3E',
     ),
     // Project(
     //     'Multiplayer HoneyComb Maze',

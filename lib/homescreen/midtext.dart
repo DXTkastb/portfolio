@@ -37,7 +37,7 @@ class MidTextState extends State<MidText> with SingleTickerProviderStateMixin {
     super.initState();
   }
 
-  List<String> str = ['Web Developer','Mobile App Developer','Sketch Artist','Photographer'];
+  List<String> str = ['Web Developer','Mobile App Developer','Photographer'];
 
   @override
   void didChangeDependencies() {
@@ -50,7 +50,7 @@ class MidTextState extends State<MidText> with SingleTickerProviderStateMixin {
   void fireAnimation() async {
     await ac.forward();
     index++;
-    if (index > 3) index = 0;
+    if (index > 2) index = 0;
     await ac.reverse();
   }
 
