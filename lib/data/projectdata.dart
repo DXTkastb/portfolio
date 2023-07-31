@@ -19,6 +19,13 @@ class ProjectData {
     //     'some.demo.com',
     //     'images/projectimg/galaxy.jpg'),
     Project(
+      'Socio',
+      'Social Media App with features similar to Intagram.\n\n \u2022  Create account (signup) and login\n\n \u2022  Add image posts and image stories\n\n \u2022  Search and follow other users and see their profile\n\n \u2022  Comment and like a post receive\n\n \u2022  Push notifications for like/comment/follow activities',
+      ['Flutter', 'Dart', 'MySQL', 'Redis','Spring Boot','RSocket'],
+      'https://github.com/DXTkastb/social-app',
+      '',
+    ),
+    Project(
       'Resk Reminder App',
       'Help users by setting reminders and notifying them at appropriate time.\n\n \u2022  Add Daily Tasks\n\n \u2022  Set Reminders for Daily Tasks\n\n \u2022  Check progress of you Tasks \n\n \u2022  Add Brief Tasks',
       ['Flutter', 'Dart', 'SQLite', 'Android'],
@@ -31,7 +38,7 @@ class ProjectData {
           '\n\n \u2022  The data collected is sent to backend(Spring App, SQL database) where it is processed with GCP Natural Language Api and stored in database.'
           '\n\n \u2022  Natural Language Api helps to retrieve useful information about speech data such as user likes/dislikes/rating.'
           '\n\n \u2022  Businesses/Organisations can view feedbacks, provided by users, using web app(Flutter Web App).',
-      ['Flutter', 'Spring', 'MySQL', 'RestFul API', 'Server Sent Events'],
+      ['Flutter', 'Spring', 'MySQL', 'RestFul API'],
       'https://github.com/DXTkastb/EasyFeedback',
       'YZAfR7uYI3E',
     ),
@@ -46,17 +53,7 @@ class ProjectData {
     //     ],
     //     'some.github.com',
     //     'some.demo.com',
-    //     'images/projectimg/flower.jpg'),
-    Project(
-      'Portfolio',
-      'Personnel project, build with Flutter, which describes my technical background and experience.\n\n \u2022  View Projects \n\n \u2022  Tech Stack \n\n \u2022  My Skills\n\n \u2022  Contact Me',
-      [
-        'Flutter Web',
-        'Dart',
-      ],
-      'https://github.com/DXTkastb/portfolio',
-      '',
-    ),
+    //     'images/projectimg/
     Project(
       'Fatigue Detection',
       'Detecting fatigue in vehicle drivers using EEG Brain signals.[DRDO Group Project.Only Certificate available]'
@@ -70,6 +67,16 @@ class ProjectData {
         'Server Sent Events',
       ],
       'https://drive.google.com/file/d/1SswKD7vnlpbZIBThtxJudVIZk-V2bXRg/view?usp=sharing',
+      '',
+    ),
+    Project(
+      'Portfolio',
+      'Personnel project, build with Flutter, which describes my technical background and experience.\n\n \u2022  View Projects \n\n \u2022  Tech Stack \n\n \u2022  My Skills\n\n \u2022  Contact Me',
+      [
+        'Flutter Web',
+        'Dart',
+      ],
+      'https://github.com/DXTkastb/portfolio',
       '',
     ),
     // Project(
